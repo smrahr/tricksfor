@@ -25,7 +25,9 @@
     --color-secondary-400: 120, 144, 156;
     --color-secondary-300: 120, 144, 156;
     --color-secondary-200: 176, 190, 197;
-    --color-secondary-100: 207, 216, 220;
+    /* //////////////////////////// */
+    --color-secondary-100: 200, 220, 229;
+    /* /////////////////////////////////////// */
     --color-secondary-50: 236, 239, 241;
 
     --color-success: 85, 139, 47;
@@ -242,4 +244,51 @@
 .slick-list,
 .slick-list * {
   height: inherit !important;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../public/css/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../public/css/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../public/css/Poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../public/css/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../public/css/Poppins/Poppins-Bold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../public/css/Poppins/Poppins-ExtraBold.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+#root {
+  margin: 0 auto;
+  /* min-height: 100vh; */
+  font-family: Poppins;
 }
