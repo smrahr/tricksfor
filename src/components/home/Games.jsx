@@ -40,11 +40,11 @@ const Games = () => {
       </div>
       <div className="hidden md:block ">
         <div className="grid grid-cols-3 grid-row-2 gap-4">
-          <div className="bg-black row-span-2 rounded-[50px] relative">
+          <div className="bg-black row-span-2 rounded-[50px] relative overflow-hidden">
             <img
               src={gameImageDesc1}
               alt="gameImage"
-              // className="object-cover"
+              className="object-cover h-full"
             />
             <div className="absolute bottom-6 left-6">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>

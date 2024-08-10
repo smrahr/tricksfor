@@ -14,7 +14,7 @@ const RoudMap = () => {
       </p>
       <div className="max-w-[554px] flex justify-center items-center md:items-start mb-2 md:mb-5">
         <div className="dark:bg-primary-900 min-w-[64px] h-[64px] rounded-full relative ">
-          <div className="before:content-[''] before:bg-primary-900 before:w-[3px] before:h-[160px] before:absolute before:top-[10px] before:left-[32px] "></div>
+          <div className="before:content-[''] before:bg-primary-900 before:w-[3px] before:h-[140px] before:absolute before:top-[10px] before:left-[32px] "></div>
         </div>
         <div className="ml-2 mt-16 md:mt-5">
           <h3 className="text-[15px] font-bold mb-4">November 2024</h3>
@@ -23,7 +23,7 @@ const RoudMap = () => {
       </div>
       <div className="max-w-[554px] flex justify-center items-center md:items-start mb-2 md:mb-5">
         <div className="dark:bg-white min-w-[64px] h-[64px] rounded-full relative z-1">
-          <div className="before:content-[''] before:bg-primary-900 before:w-[3px] before:h-[160px] before:absolute before:top-[10px] before:left-[32px]"></div>
+          <div className="before:content-[''] before:bg-primary-900 before:w-[3px] before:h-[140px] before:absolute before:top-[10px] before:left-[32px]"></div>
           <div className="dark:bg-white min-w-[64px] h-[64px] rounded-full absolute top-0 left-0"></div>
         </div>
 
@@ -34,7 +34,7 @@ const RoudMap = () => {
       </div>
       <div className="max-w-[554px] flex justify-center items-center md:items-start mb-2 md:mb-5">
         <div className="dark:bg-white min-w-[64px] h-[64px] rounded-full relative z-1">
-          <div className="before:content-[''] before:bg-primary-900 before:w-[3px] before:h-[160px] before:absolute before:top-[10px] before:left-[32px] "></div>
+          <div className="before:content-[''] before:bg-primary-900 before:w-[3px] before:h-[140px] before:absolute before:top-[10px] before:left-[32px] "></div>
           <div className="dark:bg-white min-w-[64px] h-[64px] rounded-full absolute top-0 left-0"></div>
         </div>
         <div className="ml-2 mt-16 md:mt-5">
