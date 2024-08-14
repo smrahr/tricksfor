@@ -1,4 +1,4 @@
-const RoudMap = () => {
+const RoadMap = () => {
   return (
     <div className="bg-primary-800 w-full md:w-[50%] rounded-[50px] grow p-12 flex flex-col justify-center ">
       <h2 className="hidden md:block text-[40px] font-bold mb-4 md:mb-0 text-center md:text-left">
@@ -53,4 +53,4 @@ const RoudMap = () => {
   );
 };
 
-export default RoudMap;
+export default RoadMap;
