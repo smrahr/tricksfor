@@ -39,7 +39,7 @@ const Header = () => {
           <Navbar />
 
           <button className="border-2 rounded-full">
-            <Link target="_blank" to="/">
+            <Link target="_blank" to="https://app.tricksfor.com">
               <div className="flex items-end p-2 w-[174px] h-[40px] justify-center ">
                 <p className="text-[18px]">Launch App</p>
                 <div className="w-[20px] h-[20px] ml-3">
