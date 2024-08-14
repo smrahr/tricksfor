@@ -1,6 +1,6 @@
-import logoMobile from "@assets/header/logoMobile.png";
+import logoMobile from "@assets/icon.png";
 import burgerMenu from "@assets/header/burgerMenu.png";
-import logoDesktop from "@assets/header/logoDesktop.png";
+import logoDesktop from "@assets/icon.png";
 import arrow from "@assets/header/arrow.png";
 
 import { useState } from "react";
@@ -21,7 +21,7 @@ const Header = () => {
             <img src={burgerMenu} alt="burgerMenu" />
           </button>
           <div>
-            <img src={logoMobile} alt="logo" />
+            <img src={logoMobile} alt="logo" className="rounded-[25px] w-[70px] h-[70px]" />
           </div>
 
           <div
@@ -34,14 +34,14 @@ const Header = () => {
       <div className="hidden md:block">
         <div className="flex justify-between items-center mb-[48px]">
           <div>
-            <img src={logoDesktop} alt="logo" />
+            <img src={logoDesktop} alt="logo" className="rounded-[25px] w-[70px] h-[70px]" />
           </div>
           <Navbar />
 
           <button className="border-2 rounded-full">
             <Link target="_blank" to="/">
               <div className="flex items-end p-2 w-[174px] h-[40px] justify-center ">
-                <p className="text-[18px]">Open App</p>
+                <p className="text-[18px]">Launch App</p>
                 <div className="w-[20px] h-[20px] ml-3">
                   <img src={arrow} alt="arrow" />
                 </div>
