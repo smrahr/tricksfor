@@ -19,7 +19,7 @@ const Hero = () => {
             <p>Gaming Hub</p>
           </div>
           <button className="border-4 border-white rounded-full my-[48px] w-[250px] h-[70px] justify-center items-center">
-            <Link target="_blank" to="/">
+            <Link target="_blank" to="https://app.tricksfor.com">
               <p className="text-[24px]">Launch App</p>
             </Link>
           </button>
