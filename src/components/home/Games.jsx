@@ -32,7 +32,7 @@ const Games = () => {
     },
   ];
   return (
-    <div className="py-[72px]">
+    <div className="pt-[72px]">
       <div className="block md:hidden">
         {gamesImages.map((item, index) => (
           <EachGameSection key={index} game={item} />
