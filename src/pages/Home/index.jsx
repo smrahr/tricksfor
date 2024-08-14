@@ -10,10 +10,10 @@ const Home = () => {
         <Hero />
       </div>
       <div className="container max-w-[1152px]">
-        <Games />
-      </div>
-      <div className="dark:bg-primary-800 md:dark:bg-primary-900">
         <HowItWorks />
+      </div>
+      <div className="container max-w-[1152px]">
+        <Games />
       </div>
       <div className="container max-w-[1152px]">
         <Body />

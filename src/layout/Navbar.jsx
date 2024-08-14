@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const navList = [
   { id: 1, linkName: "How it works", to: "/" },
   { id: 2, linkName: "Games", to: "/" },
-  { id: 3, linkName: "Roadmap", to: "/" },
+  { id: 3, linkName: "Roadmap", to: "/roadmap" },
   { id: 4, linkName: "About project", to: "/" },
 ];
 

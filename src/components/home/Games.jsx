@@ -11,28 +11,28 @@ import { Link } from "react-router-dom";
 const Games = () => {
   const gamesImages = [
     {
-      image: gameImage,
-      title: "Tricksfor",
+      image: gameImageDesc1,
+      title: "Games",
       description: "Unleash Your Unleash Your",
     },
     {
-      image: gameImage,
-      title: "Tricksfor",
+      image: gameImageDesc4,
+      title: "Coin",
       description: "Unleash Your Unleash Your",
     },
     {
-      image: gameImage,
-      title: "Tricksfor",
+      image: gameImageDesc3,
+      title: "RPS",
       description: "Unleash Your Unleash Your",
     },
     {
-      image: gameImage,
-      title: "Tricksfor",
+      image: gameImageDesc2,
+      title: "Dice",
       description: "Unleash Your Unleash Your",
     },
   ];
   return (
-    <div className="px-5 py-[72px]">
+    <div className="py-[72px]">
       <div className="block md:hidden">
         {gamesImages.map((item, index) => (
           <EachGameSection key={index} game={item} />
@@ -60,9 +60,7 @@ const Games = () => {
             </div>
           </div>
           <div className=" col-span-2 rounded-[50px] relative">
-            <img
-              src={gameImageDesc2}
-              alt="gameImage"
+            <img src={gameImageDesc2} alt="gameImage" className="w-[100%]"
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
@@ -72,7 +70,7 @@ const Games = () => {
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">
-                    <img src={arrow} alt="arrow" />
+                    <img src={arrow} alt="arrow" className="w-[100%]" />
                   </div>
                 </div>
               </Link>
@@ -81,7 +79,7 @@ const Games = () => {
           <div className=" rounded-[50px] relative">
             <img
               src={gameImageDesc3}
-              alt="gameImage"
+              alt="gameImage" className="w-[100%]"
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
@@ -91,17 +89,15 @@ const Games = () => {
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">
-                    <img src={arrow} alt="arrow" />
+                    <img src={arrow} alt="arrow" className="w-[100%]" />
                   </div>
                 </div>
               </Link>
             </div>
           </div>
           <div className=" rounded-[50px] relative">
-            <img
-              src={gameImageDesc4}
-              alt="gameImage"
-              // className="object-contain"
+            <img src={gameImageDesc4} alt="gameImage" className="w-[100%]" 
+              //className="object-contain" 
             />
             <div className="absolute bottom-6 left-6 ">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
@@ -110,7 +106,7 @@ const Games = () => {
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">
-                    <img src={arrow} alt="arrow" />
+                    <img src={arrow} alt="arrow" className="w-[100%]" />
                   </div>
                 </div>
               </Link>
