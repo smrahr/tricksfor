@@ -12,23 +12,23 @@ const Games = () => {
   const gamesImages = [
     {
       image: gameImageDesc1,
-      title: "Games",
-      description: "Unleash Your Unleash Your",
+      title: "Tricksfor",
+      description: "Games",
     },
     {
       image: gameImageDesc4,
-      title: "Coin",
-      description: "Unleash Your Unleash Your",
+      title: "Tricksfor",
+      description: "Coin",
     },
     {
       image: gameImageDesc3,
-      title: "RPS",
-      description: "Unleash Your Unleash Your",
+      title: "Tricksfor",
+      description: "RPS",
     },
     {
       image: gameImageDesc2,
-      title: "Dice",
-      description: "Unleash Your Unleash Your",
+      title: "Tricksfor",
+      description: "Dice",
     },
   ];
   return (
