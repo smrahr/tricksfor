@@ -10,9 +10,7 @@ const AboutProject = () => {
         About project
       </h2>
       <p className="text-[20px] text-center md:text-left">
-        Experience the thrill of crypto gambling at Trickfor. Enjoy
-        lightning-fast transactions, exclusive games, and generous bonuses. Dive
-        into a world of endless
+      The developer team has recently launched an innovative game application that integrates cryptocurrency payments based on predictions across various games. This blockchain-based platform ensures full transparency, allowing players to engage in a secure and fair gaming environment.
       </p>
     </div>
   );

@@ -67,7 +67,7 @@ const Games = () => {
             />
             <div className="absolute bottom-6 left-6 ">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
-              <p className="text-[60px] font-bold">Games</p>
+              <p className="text-[60px] font-bold">Dice</p>
               <Link target="_blank" to="/">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
@@ -85,6 +85,8 @@ const Games = () => {
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
+              <h2 className="text-[35px] font-bold">Tricksfor</h2>
+              <p className="text-[60px] font-bold">RPS</p>
               <Link target="_blank" to="/">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
@@ -102,6 +104,8 @@ const Games = () => {
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
+              <h2 className="text-[35px] font-bold">Tricksfor</h2>
+              <p className="text-[60px] font-bold">Heads or Tails</p>
               <Link target="_blank" to="/">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>

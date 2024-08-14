@@ -15,12 +15,12 @@ const Hero = () => {
         <div>
           <div className="flex flex-col justify-center items-center md:items-start">
             <p className="font-bold">Tricksfor</p>
-            <p>Unleash Your</p>
-            <p>Crypto Fortune</p>
+            <p>Crypto</p>
+            <p>Gaming Hub</p>
           </div>
           <button className="border-4 border-white rounded-full my-[48px] w-[250px] h-[70px] justify-center items-center">
             <Link target="_blank" to="/">
-              <p className="text-[24px]">Download App</p>
+              <p className="text-[24px]">Launch App</p>
             </Link>
           </button>
         </div>
