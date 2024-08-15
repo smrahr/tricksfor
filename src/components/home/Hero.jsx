@@ -1,5 +1,7 @@
 import heriImage from "@assets/home/heroImage.png";
 import heriImageDesc from "@assets/home/heroImageDesc.png";
+import backgroundImage from "@assets/home/background.png";
+
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -7,10 +9,10 @@ const Hero = () => {
     <div className="bg-secondary-100 rounded-bl-[50px] md:rounded-[50px]">
       <div className="flex flex-col md:flex-row-reverse justify-center items-center ">
         <div className="pt-[108px] w-[278px] block md:hidden">
-          <img src={heriImage} alt="heriImage" />
+          <img src={heriImage} alt="tricksfor"/>
         </div>
         <div className="hidden md:block">
-          <img src={heriImageDesc} alt="heriImage" />
+          <img src={heriImageDesc} alt="tricksfor"/>
         </div>
         <div>
           <div className="flex flex-col justify-center items-center md:items-start">
