@@ -1,9 +1,14 @@
 import EachGameSection from "./EachGameSection";
+
 import gameImage from "@assets/home/gameMob.png";
-import gameImageDesc1 from "@assets/home/gameDesc1.png";
-import gameImageDesc2 from "@assets/home/gameDesc2.png";
-import gameImageDesc3 from "@assets/home/gameDesc3.png";
-import gameImageDesc4 from "@assets/home/gameDesc4.png";
+
+import gameImageRPS from "@assets/home/rps.png";
+import gameImageCoin from "@assets/home/coin.png";
+import gameImageDice from "@assets/home/dice.png";
+
+import gameImageRPSLong from "@assets/home/rpslong.png";
+import gameImageCoinLong from "@assets/home/coinlong.png";
+import gameImageDiceLong from "@assets/home/dicelong.png";
 import arrow from "@assets/header/arrow.png";
 
 import { Link } from "react-router-dom";
@@ -11,22 +16,22 @@ import { Link } from "react-router-dom";
 const Games = () => {
   const gamesImages = [
     {
-      image: gameImageDesc1,
+      image: gameImage,
       title: "Tricksfor",
       description: "Games",
     },
     {
-      image: gameImageDesc4,
+      image: gameImageCoinLong,
       title: "Tricksfor",
       description: "Coin",
     },
     {
-      image: gameImageDesc3,
+      image: gameImageRPSLong,
       title: "Tricksfor",
       description: "RPS",
     },
     {
-      image: gameImageDesc2,
+      image: gameImageDiceLong,
       title: "Tricksfor",
       description: "Dice",
     },
@@ -42,8 +47,8 @@ const Games = () => {
         <div className="grid grid-cols-3 grid-row-2 gap-4">
           <div className="bg-black row-span-2 rounded-[50px] relative overflow-hidden">
             <img
-              src={gameImageDesc1}
-              alt="gameImage"
+              src={gameImage}
+              alt="games"
               className="object-cover h-full"
             />
             <div className="absolute bottom-6 left-6">
@@ -60,7 +65,7 @@ const Games = () => {
             </div>
           </div>
           <div className=" col-span-2 rounded-[50px] relative">
-            <img src={gameImageDesc2} alt="gameImage" className="w-[100%]"
+            <img src={gameImageDice} alt="Dice" className="w-[100%]"
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
@@ -77,9 +82,7 @@ const Games = () => {
             </div>
           </div>
           <div className=" rounded-[50px] relative">
-            <img
-              src={gameImageDesc3}
-              alt="gameImage" className="w-[100%]"
+            <img src={gameImageRPS} alt="RPS" className="w-[100%]"
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
@@ -96,7 +99,7 @@ const Games = () => {
             </div>
           </div>
           <div className=" rounded-[50px] relative">
-            <img src={gameImageDesc4} alt="gameImage" className="w-[100%]" 
+            <img src={gameImageCoin} alt="gameImage" className="w-[100%]" 
               //className="object-contain" 
             />
             <div className="absolute bottom-6 left-6 ">

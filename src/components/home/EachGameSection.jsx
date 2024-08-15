@@ -11,8 +11,8 @@ const EachGameSection = ({ game }) => {
       </div>
       <div className="w-full h-full absolute top-0 left-0">
         <div className="w-full h-full flex flex-col justify-center items-center ">
-          <h2 className="text-[20px] font-bold">{game.title}</h2>
-          <p className="text-[20px] p-2">{game.description}</p>
+          <h2 className="text-[24px] font-bold">{game.title}</h2>
+          <p className="text-[24px] p-2">{game.description}</p>
           <button className="border-4 border-white rounded-full w-[140px] h-[40px] justify-center items-center mt-[18px]">
             <Link target="_blank" to={linkPath}>
               <p className="text-[13px]">learn more</p>
