@@ -48,8 +48,8 @@ const Games = () => {
             />
             <div className="absolute bottom-6 left-6">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
-              <p className="text-[60px] font-bold">Games</p>
-              <Link target="_blank" to="/">
+              <h2 className="text-[60px] font-bold">Games</h2>
+              <Link target="_blank" to="/games">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">
@@ -65,8 +65,8 @@ const Games = () => {
             />
             <div className="absolute bottom-6 left-6 ">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
-              <p className="text-[60px] font-bold">Dice</p>
-              <Link target="_blank" to="/">
+              <h2 className="text-[60px] font-bold">Dice</h2>
+              <Link target="_blank" to="/games/dice">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">
@@ -84,8 +84,8 @@ const Games = () => {
             />
             <div className="absolute bottom-6 left-6 ">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
-              <p className="text-[60px] font-bold">RPS</p>
-              <Link target="_blank" to="/">
+              <h2 className="text-[60px] font-bold">RPS</h2>
+              <Link target="_blank" to="/games/rps">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">
@@ -101,8 +101,8 @@ const Games = () => {
             />
             <div className="absolute bottom-6 left-6 ">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
-              <p className="text-[60px] font-bold">Heads or Tails</p>
-              <Link target="_blank" to="/">
+              <h2 className="text-[60px] font-bold">Heads or Tails</h2>
+              <Link target="_blank" to="/games/coin">
                 <div className="flex items-end">
                   <p className="text-[20px]">Learn more</p>
                   <div className="w-[20px] h-[20px] ml-3">

@@ -14,9 +14,9 @@ const Hero = () => {
         </div>
         <div>
           <div className="flex flex-col justify-center items-center md:items-start">
-            <p className="font-bold">Tricksfor</p>
-            <p>Crypto</p>
-            <p>Gaming Hub</p>
+            <h1 className="font-bold">Tricksfor</h1>
+            <h1>Crypto</h1>
+            <h1>Gaming Hub</h1>
           </div>
           <button className="border-4 border-white rounded-full my-[48px] w-[250px] h-[70px] justify-center items-center">
             <Link target="_blank" to="https://app.tricksfor.com">
