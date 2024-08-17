@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Header = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -21,7 +22,11 @@ const Header = () => {
             <img src={burgerMenu} alt="burgerMenu" />
           </button>
           <div>
-            <img src={logoMobile} alt="logo" className="rounded-[25px] w-[70px] h-[70px]" />
+            <img
+              src={logoMobile}
+              alt="logo"
+              className="rounded-[25px] w-[70px] h-[70px]"
+            />
           </div>
 
           <div
@@ -34,10 +39,13 @@ const Header = () => {
       <div className="hidden md:block">
         <div className="flex justify-between items-center mb-[48px]">
           <div>
-            <img src={logoDesktop} alt="logo" className="rounded-[25px] w-[70px] h-[70px]" />
+            <img
+              src={logoDesktop}
+              alt="logo"
+              className="rounded-[25px] w-[70px] h-[70px]"
+            />
           </div>
           <Navbar />
-
           <button className="border-2 rounded-full">
             <Link target="_blank" to="https://app.tricksfor.com">
               <div className="flex items-end p-2 w-[174px] h-[40px] justify-center ">
