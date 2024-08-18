@@ -27,7 +27,7 @@ const PronsAndCons = () => {
               </li>
               <li>
                 <p className=" font-bold">Difficulty: very low</p>
-                <p>Only two options to place bet on.</p>
+                <p>Only two options to place prediction on.</p>
               </li>
             </ul>
 
@@ -38,7 +38,7 @@ const PronsAndCons = () => {
                 <p className="font-bold">Win value: medium</p>
                 <p>
                   With a successfull guess, you only win one out of two groups
-                  of bets.
+                  of predictions.
                 </p>
               </li>
             </ul>

@@ -10,9 +10,9 @@ const Streaks = () => {
             How streaks work in Coin games?
           </h3>
           <p className="text-[14px]">
-            Elevate your gaming streak with consecutive bets across various
+            Elevate your gaming streak with consecutive predictions across various
             days, and seize the opportunity to amplify your bonus rewards with a
-            victorious next bet!
+            victorious next prediction!
           </p>
 
           <ul className="w-full list-disc text-[14px] pl-10">

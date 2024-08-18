@@ -11,22 +11,22 @@ const HeadsOrTailsIntro = () => {
         <div className="pl-0 md:pl-10 w-full md:w-[48%]">
           <h3 className="text-[28px] font-bold ">About game...</h3>
           <p className="text-[14px]">
-            The Heads or Tails Game on Tricksfor is an exciting online betting
+            The Heads or Tails Game on Tricksfor is an exciting online prediction
             game where players use cryptocurrency to wager on the outcome of a
             coin flip. Here’s how it works:
           </p>
           <ul className="w-full list-disc text-[14px] pl-10">
             <li>
-              <p className=" font-bold">Betting:</p>
+              <p className=" font-bold">Prediction:</p>
               <p>
-                Players place their bets on whether the coin will land on heads
+                Players place their predictions on whether the coin will land on heads
                 or tails.
               </p>
             </li>
             <li>
               <p className=" font-bold">Crypto Payment:</p>
               <p>
-                Bets are made using various cryptocurrencies (right now MATIC is
+                Prediction are made using various cryptocurrencies (right now MATIC is
                 the only option), providing a secure and fast transaction
                 process.
               </p>
@@ -40,9 +40,9 @@ const HeadsOrTailsIntro = () => {
             </li>
           </ul>
           <p className="text-[14px]">
-            This game combines the thrill of gambling with the innovative use of
+            This game combines the thrill of prediction with the innovative use of
             cryptocurrency, offering a modern twist to the classic game of
-            chance. It’s perfect for those looking to engage in some fun betting
+            chance. It’s perfect for those looking to engage in some fun prediction
             while using their crypto assets.
           </p>
         </div>

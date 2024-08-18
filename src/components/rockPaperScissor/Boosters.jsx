@@ -1,5 +1,5 @@
-import CoinBoosters from "@assets/games/CoinBoosters.jpg";
-import CoinBoostersMob from "@assets/games/CoinBoostersMob.jpg";
+import BoostersIMG from "@assets/games/RockPaperScissorBoosters.jpg";
+import BoostersMobIMG from "@assets/games/RockPaperScissorBoostersMob.jpg";
 import { Link } from "react-router-dom";
 
 const Boosters = () => {
@@ -12,19 +12,19 @@ const Boosters = () => {
         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
           <div className="hidden md:block w-full md:w-[48%] ">
             <div className="flex justify-center overflow-hidden rounded-[50px]">
-              <img src={CoinBoosters} alt="HeadsOrTailsIntro" />
+              <img src={BoostersIMG} alt="HeadsOrTailsIntro" />
             </div>
           </div>
           <div className="block md:hidden w-full md:w-[48%] mb-5">
             <div className="flex justify-center overflow-hidden rounded-[50px] mt-5">
-              <img src={CoinBoostersMob} alt="HeadsOrTailsIntro" />
+              <img src={BoostersMobIMG} alt="HeadsOrTailsIntro" />
             </div>
           </div>
           <div className="pl-0 md:pl-10 w-full md:w-[48%]">
             <p className="text-[14px]">
               Elevate your winnings with exclusive Boosters! When you secure a
               victory in the match, our unique NFT Boosters—staked directly from
-              your wallet in the Tricksfor app—will enhance your rewards. Bet
+              your wallet in the Tricksfor app—will enhance your rewards. Predict
               and win while your NFT is staked, and revel in the additional
               bonus earnings proportional to your NFT’s multiplier effect. It’s
               time to amplify your gaming success with Tricksfor! Here are list

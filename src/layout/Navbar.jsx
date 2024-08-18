@@ -6,6 +6,7 @@ const navList = [
   { id: 2, linkName: "Games", to: "/" },
   { id: 3, linkName: "Roadmap", to: "/" },
   { id: 4, linkName: "About project", to: "/" },
+  { id: 5, linkName: "FAQ", to: "/faq" },
 ];
 
 const gameMenu = [
