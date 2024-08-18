@@ -24,7 +24,7 @@ const Boosters = () => {
             <p className="text-[14px]">
               Elevate your winnings with exclusive Boosters! When you secure a
               victory in the match, our unique NFT Boosters—staked directly from
-              your wallet in the Tricksfor app—will enhance your rewards. Bet
+              your wallet in the Tricksfor app—will enhance your rewards. Predict
               and win while your NFT is staked, and revel in the additional
               bonus earnings proportional to your NFT’s multiplier effect. It’s
               time to amplify your gaming success with Tricksfor! Here are list

@@ -1,5 +1,5 @@
-import CoinProsCons from "@assets/games/CoinProsCons.jpg";
-import CoinProsConsMob from "@assets/games/CoinProsConsMob.jpg";
+import ProsCons from "@assets/games/RockPaperScissorProsCons.jpg";
+import ProsConsMob from "@assets/games/RockPaperScissorProsConsMob.jpg";
 
 const PronsAndCons = () => {
   return (
@@ -9,12 +9,12 @@ const PronsAndCons = () => {
         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
           <div className="hidden md:block w-full md:w-[48%] ">
             <div className="flex justify-center overflow-hidden rounded-[50px]">
-              <img src={CoinProsCons} alt="HeadsOrTailsIntro" />
+              <img src={ProsCons} alt="HeadsOrTailsIntro" />
             </div>
           </div>
           <div className="block md:hidden w-full md:w-[48%] mb-5">
             <div className="flex justify-center overflow-hidden rounded-[50px] mt-5">
-              <img src={CoinProsConsMob} alt="HeadsOrTailsIntro" />
+              <img src={ProsConsMob} alt="HeadsOrTailsIntro" />
             </div>
           </div>
           <div className="pl-0 md:pl-10 w-full md:w-[48%]">
