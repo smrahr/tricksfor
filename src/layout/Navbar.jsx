@@ -8,15 +8,24 @@ const navList = [
   { id: 4, linkName: "About project", to: "/" },
 ];
 
+const gameMenu = [
+  { name: "Heads or Tails", to: "/HeadsOrTails" },
+  { name: "Dice", to: "/Dice" },
+  { name: "Rock Paper Scissor", to: "/RockPaperScissor" },
+];
+
 const Navbar = () => {
+  const { pathname } = useLocation();
   const [openGameMenu, setOpenMenuHandler] = useState(false);
 
   const openGameMenuHandler = () => {
     setOpenMenuHandler(!openGameMenu);
   };
+
   useEffect(() => {
     setOpenMenuHandler(false);
-  }, []);
+  }, [pathname]);
+  
   return (
     <div className="flex gap-[30px] text-[18px] ">
       {navList.map((item) => (
@@ -35,22 +44,24 @@ const Navbar = () => {
 
               <div
                 id="dropdown"
-                className={`${
-                  openGameMenu ? "hidden" : "block"
-                } z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-primary-800 absolute top-10 left-0`}
+                className={`z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-primary-800 absolute top-10 left-0 ${
+                  !openGameMenu ? "hidden" : "block"
+                }`}
               >
                 <ul
                   className="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownDefaultButton"
                 >
-                  <li>
-                    <Link
-                      to="/HeadsOrTails"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Heads or Tails
-                    </Link>
-                  </li>
+                  {gameMenu.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        to={item.to}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
