@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import arrow from "@assets/header/arrow.png";
 
-const RoadMap = () => {
+const Roadmap = () => {
   return (
     <div className="bg-primary-800 w-full md:w-[50%] rounded-[50px] grow p-12 flex flex-col justify-center ">
       <h2 className="hidden md:block text-[40px] font-bold mb-4 md:mb-0 text-center md:text-left">
@@ -59,4 +59,4 @@ const RoadMap = () => {
   );
 };
 
-export default RoadMap;
+export default Roadmap;

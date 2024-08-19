@@ -1,24 +1,24 @@
 import HowItWorksSection from "./HowItWorksSection";
-import RoadMap from "@assets/home/roadmap.png";
+import Roadmap from "@assets/home/roadmap.png";
 
-const RoadMapContent = [
+const RoadmapContent = [
   {
     id: 1,
-    src: RoadMap,
+    src: Roadmap,
     title: "Step 1",
     description:
       "The game starts with a new wallet address specified for the current match.",
   },
   {
     id: 2,
-    src: RoadMap,
+    src: Roadmap,
     title: "Step 2",
     description:
       "Players forecast outcomes using match statistics and the winner’s rewards, with their payments tied to each prediction option.",
   },
   {
     id: 3,
-    src: RoadMap,
+    src: Roadmap,
     title: "Step 3",
     description:
       "Each match will conclude at a specified time. The application will then randomly select a winning option, and the winners will receive rewards from the losers.",
@@ -34,7 +34,7 @@ const HowItWorks = () => {
         </h2>
         
         <div className="container flex flex-col md:flex-row justify-center items-top gap-6 p-10">
-          {RoadMapContent.map((item) => (
+          {RoadmapContent.map((item) => (
             <HowItWorksSection key={item.id} item={item} />
           ))}
         </div>
