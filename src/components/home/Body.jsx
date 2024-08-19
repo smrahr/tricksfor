@@ -1,5 +1,5 @@
 import AboutProject from "./AboutProject";
-import Roadmap from "./Roadmap";
+import Roadmap from "./RoadmapSection";
 
 const Body = () => {
   return (
