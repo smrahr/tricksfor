@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const navList = [
   { id: 1, linkName: "How it works", to: "/" },
   { id: 2, linkName: "Games", to: "/" },
-  { id: 3, linkName: "Roadmap", to: "/" },
+  { id: 3, linkName: "Roadmap", to: "/RoudMap" },
   { id: 4, linkName: "About project", to: "/" },
   { id: 5, linkName: "FAQ", to: "/faq" },
 ];
@@ -26,7 +26,7 @@ const Navbar = () => {
   useEffect(() => {
     setOpenMenuHandler(false);
   }, [pathname]);
-  
+
   return (
     <div className="flex gap-[30px] text-[18px] ">
       {navList.map((item) => (

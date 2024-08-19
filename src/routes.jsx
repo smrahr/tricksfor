@@ -4,6 +4,7 @@ import HeadsOrTails from "./pages/HeadsOrTails";
 import RockPaperScissor from "./pages/RockPaperScissor";
 import Dice from "./pages/Dice";
 import Faq from "./pages/FAQ";
+import RoudMap from "./pages/RoudMap";
 
 export const routes = [
   {
@@ -25,5 +26,9 @@ export const routes = [
   {
     path: routePaths.FAQ,
     element: <Faq />,
+  },
+  {
+    path: routePaths.RoudMap,
+    element: <RoudMap />,
   },
 ];
