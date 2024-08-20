@@ -3,14 +3,15 @@ import Games from "@components/home/Games";
 import HowItWorks from "@components/home/HowItWorks";
 import Body from "@components/home/Body";
 
-const Home = () => {
+const Home = ({ resultTableRef }) => {
+  console.log(resultTableRef, "resultTableRef")
   return (
     <div>
       <div className="container max-w-[1152px]">
         <Hero />
       </div>
       <div className="container max-w-[1152px]">
-        <HowItWorks />
+        <HowItWorks ref={resultTableRef} />
       </div>
       <div className="container max-w-[1152px]">
         <Games />
