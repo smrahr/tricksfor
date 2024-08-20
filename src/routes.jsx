@@ -2,9 +2,11 @@ import Home from "@pages/Home";
 import * as routePaths from "@constants/routePaths";
 import HeadsOrTails from "./pages/HeadsOrTails";
 import RockPaperScissor from "./pages/RockPaperScissor";
-import Dice from "./pages/Dice";
-import Faq from "./pages/FAQ";
-import Roadmap from "./pages/Roadmap";
+import Dice from "@pages/Dice";
+import Faq from "@pages/FAQ";
+import Roadmap from "@pages/Roadmap";
+import Transparency from "@pages/Transparency";
+import Affiliate from "./pages/Affiliate";
 
 export const routes = [
   {
@@ -30,5 +32,13 @@ export const routes = [
   {
     path: routePaths.Roadmap,
     element: <Roadmap />,
+  },
+  {
+    path: routePaths.Transparency,
+    element: <Transparency />,
+  },
+  {
+    path: routePaths.Affiliate,
+    element: <Affiliate />,
   },
 ];
