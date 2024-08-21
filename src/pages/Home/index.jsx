@@ -2,16 +2,16 @@ import Hero from "@components/home/Hero";
 import Games from "@components/home/Games";
 import HowItWorks from "@components/home/HowItWorks";
 import Body from "@components/home/Body";
+import { forwardRef } from "react";
 
-const Home = ({ resultTableRef }) => {
-  console.log(resultTableRef, "resultTableRef")
+const Home = forwardRef(function Home(props, ref) {
   return (
     <div>
       <div className="container max-w-[1152px]">
         <Hero />
       </div>
       <div className="container max-w-[1152px]">
-        <HowItWorks ref={resultTableRef} />
+        <HowItWorks ref={ref}/>
       </div>
       <div className="container max-w-[1152px]">
         <Games />
@@ -21,6 +21,6 @@ const Home = ({ resultTableRef }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Home;
