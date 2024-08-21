@@ -1,45 +1,37 @@
-import CoinProsCons from "@assets/games/CoinProsCons.jpg";
-import CoinProsConsMob from "@assets/games/CoinProsConsMob.jpg";
+import RewardIMG from "@assets/affiliate/AffiliateReward.png";
+import RewardIMGMob from "@assets/affiliate/AffiliateRewardMob.png";
 
 const PronsAndCons = () => {
   return (
     <div className="m-5 mt-[72px]">
       <div className="p-5 flex flex-col  items-start gap-2 dark:bg-primary-800 rounded-bl-[50px] md:rounded-[50px]">
-        <h3 className="text-[28px] font-bold pl-0 md:pl-10 ">Pros and Cons</h3>
+        <h3 className="text-[28px] font-bold pl-0 md:pl-10 ">Rewards</h3>
         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
           <div className="hidden md:block w-full md:w-[48%] ">
             <div className="flex justify-center overflow-hidden rounded-[50px]">
-              <img src={CoinProsCons} alt="HeadsOrTailsIntro" />
+              <img src={RewardIMG} alt="Affiliate Rewards" />
             </div>
           </div>
           <div className="block md:hidden w-full md:w-[48%] mb-5">
             <div className="flex justify-center overflow-hidden rounded-[50px] mt-5">
-              <img src={CoinProsConsMob} alt="HeadsOrTailsIntro" />
+              <img src={RewardIMGMob} alt="Affiliate Rewards" />
             </div>
           </div>
           <div className="pl-0 md:pl-10 w-full md:w-[48%]">
-            <h3 className="text-[18px] font-bold ">Pros:</h3>
-
+            <h3 className="text-[20px] font-bold ">Game reward:</h3>
             <ul className="w-full list-disc text-[14px] pl-10">
               <li>
-                <p className="font-bold">Risk: low</p>
-                <p>There is always %50 chance to win the game.</p>
-              </li>
-              <li>
-                <p className=" font-bold">Difficulty: very low</p>
-                <p>Only two options to place prediction on.</p>
+                <p className="font-bold text-[16px]">1% game rewards</p>
+                <p className="text-[14px]">When your referee wins a match and earns rewards, you’ll receive 1% of their reward value as a bonus!</p>
               </li>
             </ul>
-
-            <h3 className="text-[18px] font-bold ">Cons:</h3>
+            
+            <h3 className="text-[20px] font-bold ">NFT reward:</h3>
 
             <ul className="w-full list-disc text-[14px] pl-10">
               <li>
-                <p className="font-bold">Win value: medium</p>
-                <p>
-                  With a successfull guess, you only win one out of two groups
-                  of predictions.
-                </p>
+                <p className="font-bold text-[16px]">10% trade value</p>
+                <p className="text-[14px]">When your referee purchases an NFT booster from any of our collections, you’ll earn 10% of the trade value as a reward!</p>
               </li>
             </ul>
           </div>

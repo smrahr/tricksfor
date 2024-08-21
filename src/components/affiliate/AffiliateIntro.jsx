@@ -1,59 +1,50 @@
-import HeadsOrTailsIntroIMG from "@assets/games/HeadsOrTailsIntro.jpg";
-import HeadsOrTailsIntroMobIMG from "@assets/games/HeadsOrTailsIntroMob.jpg";
+import IntroIMG from "@assets/affiliate/AffiliateIntro.png";
+import IntroMobIMG from "@assets/affiliate/AffiliateIntroMob.png";
 
 const AffiliateIntro = () => {
   return (
     <div className="pt-[158px] m-5 md:pt-[0px]">
       <h2 className="text-[36px] md:text-[40px] pl-4 md:pl-10">
-        Heads or Tails
+        Affiliate
       </h2>
       <div className="p-5 flex flex-col md:flex-row items-start gap-2 md:gap-10 justify-start md:justify-between dark:bg-primary-800 rounded-bl-[50px] md:rounded-[50px]">
         <div className="pl-0 md:pl-10 w-full md:w-[48%]">
-          <h3 className="text-[28px] font-bold ">About game...</h3>
+          <h3 className="text-[28px] font-bold ">How tricksfor affiliate works</h3>
           <p className="text-[14px]">
-            The Heads or Tails Game on Tricksfor is an exciting online
-            prediction game where players use cryptocurrency to wager on the
-            outcome of a coin flip. Here’s how it works:
+            Affiliate marketing is a performance-based marketing strategy where individuals or companies, known as affiliates, promote a merchant's products or services and earn a commission for each sale or lead generated through their efforts. 
+          </p>
+          <p className="text-[14px]">
+            Join the Tricksfor affiliate program through any of these options and start earning rewards today!
           </p>
           <ul className="w-full list-disc text-[14px] pl-10">
             <li>
-              <p className=" font-bold">Prediction:</p>
+              <p className="text-[20px] font-bold">Share referral link:</p>
               <p>
-                Players place their predictions on whether the coin will land on
-                heads or tails.
+                Get your unique referral link from the Tricksfor app and share it with your friends or on social media. Anyone who joins Tricksfor through your link will become your referee, earning you rewards!
               </p>
             </li>
             <li>
-              <p className=" font-bold">Crypto Payment:</p>
+              <p className="text-[20px] font-bold">Share your wallet address:</p>
               <p>
-                Prediction are made using various cryptocurrencies (right now
-                MATIC is the only option), providing a secure and fast
-                transaction process.
+                Invite your friends or subscribers to manually set their referral by submitting your wallet address. It’s a simple and secure way to earn rewards together!
               </p>
             </li>
             <li>
-              <p className=" font-bold">Guessing the Future:</p>
+              <p className="text-[20px] font-bold">Share your referral code:</p>
               <p>
-                The game tests players’ ability to predict the coin’s landing
-                side, adding an element of anticipation and strategy.
+                For enhanced privacy in manual mode, share your referral code instead of your wallet address.
               </p>
             </li>
           </ul>
-          <p className="text-[14px]">
-            This game combines the thrill of prediction with the innovative use
-            of cryptocurrency, offering a modern twist to the classic game of
-            chance. It’s perfect for those looking to engage in some fun
-            prediction while using their crypto assets.
-          </p>
         </div>
         <div className="hidden md:block w-full md:w-[48%]">
           <div className="flex justify-center overflow-hidden rounded-[50px]">
-            <img src={HeadsOrTailsIntroIMG} alt="HeadsOrTailsIntro" />
+            <img src={IntroIMG} alt="HeadsOrTailsIntro" />
           </div>
         </div>
         <div className="block md:hidden w-full md:w-[48%] mt-5">
           <div className="flex justify-center overflow-hidden rounded-[50px] ">
-            <img src={HeadsOrTailsIntroMobIMG} alt="HeadsOrTailsIntro" />
+            <img src={IntroMobIMG} alt="HeadsOrTailsIntro" />
           </div>
         </div>
       </div>

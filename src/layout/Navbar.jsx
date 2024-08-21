@@ -4,9 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 const navList = [
   { id: 1, linkName: "How it works", to: "/" },
   { id: 2, linkName: "Games", to: "/" },
-  { id: 3, linkName: "Roadmap", to: "/Roadmap" },
-  { id: 4, linkName: "About project", to: "/" },
-  { id: 5, linkName: "FAQ", to: "/faq" },
+  { id: 3, linkName: "About project", to: "/" },
+  { id: 4, linkName: "Roadmap", to: "/Roadmap" },
+  { id: 5, linkName: "Affiliate", to: "/affiliate" },
+  { id: 6, linkName: "FAQ", to: "/faq" },
 ];
 
 const gameMenu = [
