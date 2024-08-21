@@ -1,11 +1,11 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Dashbord = ({ children }) => {
+const Dashbord = ({ children, goToHowToWork }) => {
   return (
     <div className="pb-[72px]">
       <div className="container max-w-[1152px]">
-        <Header />
+        <Header goToHowToWork={goToHowToWork}/>
       </div>
       <div>{children}</div>
       <div className="container max-w-[1152px]">

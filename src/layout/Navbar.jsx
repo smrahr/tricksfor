@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navList = [
-  { id: 1, linkName: "How it works", to: "/" },
-  { id: 2, linkName: "Games", to: "/" },
-  { id: 3, linkName: "Roadmap", to: "/Roadmap" },
-  { id: 4, linkName: "About project", to: "/" },
-  { id: 5, linkName: "FAQ", to: "/faq" },
+  { id: 1, linkName: "Home", to: "/" },
+  { id: 2, linkName: "How it works", to: "/" },
+  { id: 3, linkName: "Games", to: "/" },
+  { id: 4, linkName: "Roadmap", to: "/Roadmap" },
+  { id: 5, linkName: "About project", to: "/" },
+  { id: 6, linkName: "FAQ", to: "/faq" },
 ];
 
 const gameMenu = [
@@ -15,7 +16,7 @@ const gameMenu = [
   { name: "Rock Paper Scissor", to: "/RockPaperScissor" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ goToHowToWork }) => {
   const { pathname } = useLocation();
   const [openGameMenu, setOpenMenuHandler] = useState(false);
 
@@ -31,7 +32,7 @@ const Navbar = () => {
     <div className="flex gap-[30px] text-[18px] ">
       {navList.map((item) => (
         <div key={item.id}>
-          {item.id === 2 ? (
+          {item.id === 3 ? (
             <div className="relative">
               <button
                 id="dropdownDefaultButton"
@@ -66,6 +67,16 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
+          ) : item.id === 2 ? (
+            <button
+              id="dropdownDefaultButton"
+              data-dropdown-toggle="dropdown"
+              className="text-md text-center inline-flex items-center"
+              type="button"
+              onClick={goToHowToWork}
+            >
+              {item.linkName}
+            </button>
           ) : (
             <Link
               className="text-md text-center inline-flex items-center"

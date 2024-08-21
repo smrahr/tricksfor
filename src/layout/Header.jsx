@@ -74,7 +74,7 @@ const Header = ({ goToHowToWork }) => {
               className="rounded-[25px] w-[70px] h-[70px]"
             />
           </div>
-          <Navbar />
+          <Navbar goToHowToWork={goToHowToWork} />
           <button className="border-2 rounded-full">
             <Link target="_blank" to="https://app.tricksfor.com">
               <div className="flex items-end p-2 w-[174px] h-[40px] justify-center ">
