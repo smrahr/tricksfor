@@ -1,7 +1,7 @@
 import AffiliateIntro from "@components/affiliate/AffiliateIntro";
 import Streaks from "@components/affiliate/Streaks";
 import Boosters from "@components/affiliate/Boosters";
-import PronsAndCons from "@components/affiliate/ProsAndCons";
+import AffiliateReward from "@components/affiliate/AffiliateReward";
 
 const Affiliate = () => {
   return (
@@ -10,14 +10,14 @@ const Affiliate = () => {
         <AffiliateIntro />
       </div>
       <div className="container max-w-[1152px]">
-        <PronsAndCons />
+        <AffiliateReward />
       </div>
-      <div className="container max-w-[1152px]">
+      {/* <div className="container max-w-[1152px]">
         <Streaks />
       </div>
       <div className="container max-w-[1152px]">
         <Boosters />
-      </div>
+      </div> */}
     </div>
   );
 };
