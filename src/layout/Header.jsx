@@ -35,22 +35,22 @@ const Header = ({ goToHowToWork }) => {
 
               <ul className="flex flex-col items-center justify-between min-h-[250px] rounded-md text-[16px]  bg-black">
                 <li className="border-b border-gray-400 opacity-55 p-4 rounded-md w-full">
-                  <Link href="/">How it works</Link>
+                  <Link to="/">How it works</Link>
                 </li>
                 <li className="border-b border-gray-400 opacity-55 p-4 rounded-md w-full">
-                  <Link href="/">Games</Link>
+                  <Link to="/">Games</Link>
                 </li>
                 <li className="border-b border-gray-400 opacity-55 p-4 rounded-md w-full">
-                  <Link href="/Roadmap">Roadmap</Link>
+                  <Link to="/Roadmap">Roadmap</Link>
                 </li>
                 <li className="border-b border-gray-400  opacity-55 p-4 rounded-md w-full">
-                  <Link href="/">How it works</Link>
+                  <Link to="/affiliate">Affiliate</Link>
                 </li>
                 <li className="border-b border-gray-400  opacity-55 p-4 rounded-md w-full">
-                  <Link href="/">About project</Link>
+                  <Link to="/">About project</Link>
                 </li>
                 <li className="border-b border-gray-400  opacity-55 p-4 rounded-md w-full">
-                  <Link href="/faq">FAQ</Link>
+                  <Link to="/faq">FAQ</Link>
                 </li>
               </ul>
             </div>
