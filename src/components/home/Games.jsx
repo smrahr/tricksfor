@@ -38,7 +38,7 @@ const Games = () => {
   ];
   return (
     <div className="pt-[72px]">
-      <div className="block md:hidden">
+      <div className="block md:hidden p-5">
         {gamesImages.map((item, index) => (
           <EachGameSection key={index} game={item} />
         ))}
@@ -46,11 +46,7 @@ const Games = () => {
       <div className="hidden md:block ">
         <div className="grid grid-cols-3 grid-row-2 gap-4">
           <div className="bg-black row-span-2 rounded-[50px] relative overflow-hidden">
-            <img
-              src={gameImage}
-              alt="games"
-              className="object-cover h-full"
-            />
+            <img src={gameImage} alt="games" className="object-cover h-full" />
             <div className="absolute bottom-6 left-6">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
               <h2 className="text-[60px] font-bold">Games</h2>
@@ -64,8 +60,11 @@ const Games = () => {
               </Link>
             </div>
           </div>
-          <div className=" col-span-2 rounded-[50px] relative">
-            <img src={gameImageDice} alt="Dice" className="w-[100%]"
+          <div className="col-span-2 rounded-[50px] relative">
+            <img
+              src={gameImageDice}
+              alt="Dice"
+              className="w-[100%]"
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
@@ -82,7 +81,10 @@ const Games = () => {
             </div>
           </div>
           <div className=" rounded-[50px] relative">
-            <img src={gameImageRPS} alt="RPS" className="w-[100%]"
+            <img
+              src={gameImageRPS}
+              alt="RPS"
+              className="w-[100%]"
               // className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
@@ -99,8 +101,11 @@ const Games = () => {
             </div>
           </div>
           <div className=" rounded-[50px] relative">
-            <img src={gameImageCoin} alt="gameImage" className="w-[100%]" 
-              //className="object-contain" 
+            <img
+              src={gameImageCoin}
+              alt="gameImage"
+              className="w-[100%]"
+              //className="object-contain"
             />
             <div className="absolute bottom-6 left-6 ">
               <h2 className="text-[35px] font-bold">Tricksfor</h2>
