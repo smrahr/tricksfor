@@ -11,9 +11,9 @@ const navList = [
 ];
 
 const gameMenu = [
-  { name: "Heads or Tails", to: "/HeadsOrTails" },
-  { name: "Dice", to: "/Dice" },
-  { name: "Rock Paper Scissor", to: "/RockPaperScissor" },
+  { name: "Heads or Tails", to: "/games/coin" },
+  { name: "Dice", to: "/games/dice" },
+  { name: "Rock Paper Scissor", to: "/games/rps" },
 ];
 
 const Navbar = ({ goToHowToWork }) => {
