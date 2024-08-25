@@ -1,22 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const navList = [
-  { id: 1, linkName: "Home", to: "/" },
-  { id: 2, linkName: "How it works", to: "/" },
-  { id: 3, linkName: "Games", to: "/" },
-  { id: 5, linkName: "Roadmap", to: "/Roadmap" },
-  { id: 6, linkName: "Affiliate", to: "/affiliate" },
-  { id: 7, linkName: "FAQ", to: "/faq" },
-];
-
-const gameMenu = [
-  { name: "Heads or Tails", to: "/games/coin" },
-  { name: "Dice", to: "/games/dice" },
-  { name: "Rock Paper Scissor", to: "/games/rps" },
-];
-
-const Navbar = ({ goToHowToWork }) => {
+const Navbar = ({ goToHowToWork, navList, gameMenu }) => {
   const { pathname } = useLocation();
   const [openGameMenu, setOpenMenuHandler] = useState(false);
 
@@ -32,7 +17,7 @@ const Navbar = ({ goToHowToWork }) => {
     <div className="flex gap-[30px] text-[18px] ">
       {navList.map((item) => (
         <div key={item.id}>
-          {item.id === 3 ? (
+          {item.id === 2 ? (
             <div className="relative">
               <button
                 id="dropdownDefaultButton"
@@ -66,7 +51,7 @@ const Navbar = ({ goToHowToWork }) => {
                 </ul>
               </div>
             </div>
-          ) : item.id === 2 ? (
+          ) : item.id === 1 ? (
             <button
               id="dropdownDefaultButton"
               data-dropdown-toggle="dropdown"

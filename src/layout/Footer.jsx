@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="hidden md:block pt-[72px]">
+    <div className="hidden md:block pt-[72px] m-5">
       <div className="bg-primary-800 w-full rounded-[50px] grow p-12 flex justify-between ">
         <div>
           <img
