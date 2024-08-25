@@ -28,7 +28,7 @@ const RoadmapContent = [
 
 const HowItWorks = forwardRef(function HowItWorks(props, ref) {
   return (
-    <div className="pt-[72px]">
+    <div className="pt-[72px] m-5">
       <div className="p-5 md:dark:bg-primary-800 rounded-[0px] md:rounded-[50px] max-w-[1152px]">
         <h2
           className="text-[36px] text-center md:text-[40px] md:text-left pl-10"

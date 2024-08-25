@@ -11,7 +11,7 @@ const Home = forwardRef(function Home(props, ref) {
         <Hero />
       </div>
       <div className="container max-w-[1152px]">
-        <HowItWorks ref={ref}/>
+        <HowItWorks ref={ref} />
       </div>
       <div className="container max-w-[1152px]">
         <Games />
