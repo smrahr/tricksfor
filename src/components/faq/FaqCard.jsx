@@ -6,7 +6,7 @@ const FaqCard = ({ handleAnswer, answer }) => {
     <div className=" m-5">
       <div className="flex flex-col items-start gap-2 dark:bg-primary-800 rounded-[50px] overflow-hidden">
         <h2 className="w-full p-5 text-[36px] md:text-[40px] pl-4 md:pl-10 text-center dark:bg-black">
-          questions
+          Frequently Asked Questions
         </h2>
         <div className="w-full p-5 flex flex-col py-10 divide-y divide-slate-500">
           {faqData.map((item, index) => (

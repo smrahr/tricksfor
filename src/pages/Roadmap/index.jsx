@@ -16,10 +16,9 @@ const Roadmap = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(109, 148, 111)",
+              borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -37,10 +36,9 @@ const Roadmap = () => {
             className="vertical-timeline-element--work"
             date="October 2024"
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(109, 148, 111)",
+              borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
@@ -61,10 +59,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaPlaneDeparture />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(113, 117, 91)",
+              borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid white" }}
@@ -84,10 +81,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaPlaneDeparture />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(113, 117, 91)",
+              borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid white" }}
@@ -105,10 +101,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(109, 148, 111)",
+              borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -129,10 +124,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaPlaneDeparture />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(113, 117, 91)",
+              borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -150,10 +144,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(109, 148, 111)",
+              borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid white" }}
@@ -167,10 +160,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(113, 117, 91)",
+              borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -188,10 +180,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(109, 148, 111)",
+              borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -208,10 +199,9 @@ const Roadmap = () => {
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
-              background: "white",
-              color: "black",
+              background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
-              borderTop: "5px solid rgb(109, 148, 111)",
+              borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
