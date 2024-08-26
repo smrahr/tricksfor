@@ -133,11 +133,13 @@ const Header = ({ goToHowToWork }) => {
       <div className="hidden md:block">
         <div className="flex justify-between items-center mb-[48px]">
           <div>
-            <img
-              src={logoDesktop}
-              alt="logo"
-              className="rounded-[25px] w-[70px] h-[70px]"
-            />
+            <Link to="/">
+              <img
+                src={logoDesktop}
+                alt="logo"
+                className="rounded-[25px] w-[70px] h-[70px]"
+              />
+            </Link>
           </div>
           <Navbar
             navList={navList}
