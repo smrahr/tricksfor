@@ -15,14 +15,19 @@ const Roadmap = () => {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(109, 148, 111)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(109, 148, 111)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="September 2024 - Now"
             iconStyle={{ background: "rgb(13, 107, 3)", color: "#fff" }}
             icon={<FaPlay />}
           >
             <h3 className="vertical-timeline-element-title">Launch</h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4> */}
             <p>
               Launch with basic games (RPS, Heads or Tails, Dice) on polygon
               network
@@ -31,15 +36,18 @@ const Roadmap = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="October 2024"
-            contentStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(109, 148, 111)",
+              borderRadius: "5px",
+            }}
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(109, 148, 111)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             icon={<FaRocket />}
           >
             <h3 className="vertical-timeline-element-title">Boosters</h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4> */}
             <p>
               Unlock the power of Game Boosters! Purchase exclusive NFT
               collections on OpenSea, stake them directly from your wallet in
@@ -52,15 +60,18 @@ const Roadmap = () => {
             date="Feature"
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaPlaneDeparture />}
-            contentStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(113, 117, 91)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(113, 117, 91)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid white" }}
           >
             <h4 className="vertical-timeline-element-title text-[20px] font-bold">
               Big Blind Games
             </h4>
-            {/* <h4 className="vertical-timeline-element-subtitle">
-            Los Angeles, CA
-          </h4> */}
             <p className="text-[15px]">
               Get ready for an adrenaline rush! We’re launching games with a 10x
               minimum payment for players who crave higher stakes and bigger
@@ -72,15 +83,18 @@ const Roadmap = () => {
             date="Feature"
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaPlaneDeparture />}
-            contentStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(113, 117, 91)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(113, 117, 91)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid white" }}
           >
             <h3 className="vertical-timeline-element-title text-[20px] font-bold">
               RPS Fire Mode
             </h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4> */}
             <p className="text-[15px]">
               Lauch Rock paper scissor fire game mode
             </p>
@@ -90,13 +104,18 @@ const Roadmap = () => {
             date="December 2024"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
-            contentStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(109, 148, 111)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(109, 148, 111)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
           >
             <h3 className="vertical-timeline-element-title">
               New Chains On Games
             </h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">Online Course</h4> */}
             <p>
               Exciting news! We’re expanding our game offerings to new horizons.
               Soon, you’ll be able to play on chains like Optimism, Arbitrum,
@@ -109,13 +128,18 @@ const Roadmap = () => {
             date="Feature"
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaPlaneDeparture />}
-            contentStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(113, 117, 91)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(113, 117, 91)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
           >
             <h3 className="vertical-timeline-element-title text-[20px] font-bold">
-              Tornoments{" "}
+              Tornoments
             </h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">Certification</h4> */}
             <p className="text-[15px]">
               Run tornoments for top rank players or owner of tornoment NFTs{" "}
             </p>
@@ -125,13 +149,16 @@ const Roadmap = () => {
             date="March 2025"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
-            contentStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(109, 148, 111)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(109, 148, 111)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid white" }}
           >
             <h3 className="vertical-timeline-element-title">Telegram Games</h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">
-            Bachelor Degree
-          </h4> */}
             <p>Launch current games in telegram on TON chain</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -139,13 +166,18 @@ const Roadmap = () => {
             date="Feature"
             iconStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
             icon={<FaRocket />}
-            contentStyle={{ background: "rgb(113, 117, 91)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(113, 117, 91)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(113, 117, 91)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
           >
             <h3 className="vertical-timeline-element-title text-[20px] font-bold">
               New game
             </h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">Certification</h4> */}
             <p className="text-[15px]">
               Launch new game (Rollet would be the best option, who knows...)
             </p>
@@ -155,13 +187,16 @@ const Roadmap = () => {
             date="Jun 2025"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
-            contentStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(109, 148, 111)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(109, 148, 111)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
           >
             <h3 className="vertical-timeline-element-title">Strategic Game</h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">
-            Bachelor Degree
-          </h4> */}
             <p>
               Launch strategic game containing three phases (Each phase duration
               is around 60 to 90 days)
@@ -172,11 +207,16 @@ const Roadmap = () => {
             date="September 2025"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
-            contentStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(109, 148, 111)" }}
+            contentStyle={{
+              background: "white",
+              color: "black",
+              boxShadow: "none",
+              borderTop: "5px solid rgb(109, 148, 111)",
+              borderRadius: "5px",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
           >
             <h3 className="vertical-timeline-element-title">Tricksfor Coin</h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">Certification</h4> */}
             <p>Lauch Tricksfor token with the third phase of strategic game</p>
           </VerticalTimelineElement>
 
