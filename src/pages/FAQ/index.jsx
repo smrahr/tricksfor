@@ -1,6 +1,7 @@
 import FaqCard from "@components/faq/FaqCard";
 import { faqData } from "@constants/faqData";
 import { useEffect, useState } from "react";
+import HtmlParser from "react-html-parser";
 
 const Faq = () => {
   const [answer, setAnswer] = useState(null);
@@ -41,8 +42,8 @@ const Faq = () => {
               isShow ? "opacity-100" : "opacity-0"
             } w-full flex justify-center  px-5 py-16 transition-all duration-[2000ms]`}
           >
-            <p className="text-[14px] font-bold text-center">
-              {isShow ? answer?.answer : ""}
+            <p className="text-[18px] text-left">
+              {isShow ? HtmlParser(answer?.answer)  : ""}
             </p>
           </div>
         </div>

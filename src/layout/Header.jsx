@@ -50,7 +50,7 @@ const Header = ({ goToHowToWork }) => {
               onClick={handleClick}
               className={!isOpen ? "block" : "hidden"}
             >
-              <CiMenuBurger onClick={() => setIsOpen(true)} color="black" />
+              <CiMenuBurger onClick={() => setIsOpen(true)} color="white" />
             </button>
             <div
               className={`absolute top-0 left-0 w-[200px] z-1000 ${
