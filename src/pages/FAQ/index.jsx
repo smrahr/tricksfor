@@ -1,7 +1,7 @@
 import FaqCard from "@components/faq/FaqCard";
 import { faqData } from "@constants/faqData";
 import { useEffect, useState } from "react";
-import HtmlParser from "react-html-parser";
+import HtmlParser from "html-react-parser";
 
 const Faq = () => {
   const [answer, setAnswer] = useState(null);
