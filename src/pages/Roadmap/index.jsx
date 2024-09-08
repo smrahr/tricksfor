@@ -21,7 +21,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
             date="September 2024 - Now"
             iconStyle={{ background: "rgb(13, 107, 3)", color: "#fff" }}
             icon={<FaPlay />}
@@ -42,7 +44,9 @@ const Roadmap = () => {
               borderRadius: "5px",
             }}
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
             icon={<FaRocket />}
           >
             <h3 className="vertical-timeline-element-title">Boosters</h3>
@@ -64,7 +68,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid rgba(var(--color-primary-800))",
+            }}
           >
             <h4 className="vertical-timeline-element-title text-[20px] font-bold">
               Big Blind Games
@@ -86,7 +92,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title text-[20px] font-bold">
               RPS Fire Mode
@@ -106,7 +114,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title">
               New Chains On Games
@@ -129,7 +139,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title text-[20px] font-bold">
               Tornoments
@@ -149,7 +161,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title">Telegram Games</h3>
             <p>Launch current games in telegram on TON chain</p>
@@ -165,7 +179,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(113, 117, 91)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title text-[20px] font-bold">
               New game
@@ -185,7 +201,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title">Strategic Game</h3>
             <p>
@@ -204,7 +222,9 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgba(var(--color-primary-800))",
+            }}
           >
             <h3 className="vertical-timeline-element-title">Tricksfor Coin</h3>
             <p>Lauch Tricksfor token with the third phase of strategic game</p>
