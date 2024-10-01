@@ -5,32 +5,51 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="hidden md:block pt-[72px] m-5">
-      <div className="bg-primary-800 w-full rounded-[50px] grow p-12 flex justify-between ">
-        <div>
+    <div className=" pt-[72px] m-5">
+      <div className="bg-primary-800 w-full rounded-[50px] grow p-12 flex justify-between flex-col md:flex-row">
+        <div className="hidden md:block">
           <img
             src={footerLogo}
             alt="logo"
             className="rounded-[25px] w-[70px] h-[70px]"
           />
         </div>
-        <div className="flex gap-12 justify-center items-center">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center ">
           <Link target="_blank" to="/">
-            <p className="text-[20px]">Support</p>
+            <p className="text-[16px] md:text-[20px]">Support</p>
           </Link>
           <Link target="_blank" to="/">
-            <p className="text-[20px]">Terms of use</p>
+            <p className="text-[16px] md:text-[20px]">Terms of use</p>
           </Link>
           <Link target="_blank" to="/">
-            <p className="text-[20px]">Privacy policy</p>
+            <p className="text-[16px] md:text-[20px]">Privacy policy</p>
           </Link>
         </div>
-        <div className="flex gap-4 justify-center items-center">
-          <div>
-            <img src={XLogo} alt="XLogo" />
+        <div className="hidden md:block">
+          <div className="flex gap-4 justify-center items-center">
+            <div>
+              <img src={XLogo} alt="XLogo" />
+            </div>
+            <div>
+              <img src={discordIcon} alt="discordIcon" />
+            </div>
           </div>
-          <div>
-            <img src={discordIcon} alt="discordIcon" />
+        </div>
+        <div className="block md:hidden">
+          <div className="flex gap-4 justify-between items-center mt-6">
+            <div>
+              <img src={XLogo} alt="XLogo" />
+            </div>
+            <div>
+              <img src={discordIcon} alt="discordIcon" />
+            </div>
+            <div>
+              <img
+                src={footerLogo}
+                alt="logo"
+                className="rounded-[25px] w-[70px] h-[70px]"
+              />
+            </div>
           </div>
         </div>
       </div>
