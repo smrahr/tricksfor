@@ -31,7 +31,7 @@ const Footer = () => {
               <img src={XLogo} alt="XLogo" />
             </div> */}
             <div>
-              <a href="https://discord.com/invite/QKuS5WvC?utm_source=Discord%20Widget&utm_medium=Connect" target="_blank">
+              <a href="https://discord.gg/j7xd2uSFvy" target="_blank">
                 <img src={discordIcon} alt="discordIcon" />
               </a>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => {
               <img src={XLogo} alt="XLogo" />
             </div> */}
             <div>
-              <a href="https://discord.com/invite/QKuS5WvC?utm_source=Discord%20Widget&utm_medium=Connect" target="_blank">
+              <a href="https://discord.gg/j7xd2uSFvy" target="_blank">
                 <img src={discordIcon} alt="discordIcon" />
               </a>
             </div>
