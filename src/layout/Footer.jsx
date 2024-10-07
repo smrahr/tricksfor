@@ -27,21 +27,25 @@ const Footer = () => {
         </div>
         <div className="hidden md:block">
           <div className="flex gap-4 justify-center items-center">
-            <div>
+            {/* <div>
               <img src={XLogo} alt="XLogo" />
-            </div>
+            </div> */}
             <div>
-              <img src={discordIcon} alt="discordIcon" />
+              <a href="https://discord.com/invite/QKuS5WvC?utm_source=Discord%20Widget&utm_medium=Connect" target="_blank">
+                <img src={discordIcon} alt="discordIcon" />
+              </a>
             </div>
           </div>
         </div>
         <div className="block md:hidden">
           <div className="flex gap-4 justify-between items-center mt-6">
-            <div>
+            {/* <div>
               <img src={XLogo} alt="XLogo" />
-            </div>
+            </div> */}
             <div>
-              <img src={discordIcon} alt="discordIcon" />
+              <a href="https://discord.com/invite/QKuS5WvC?utm_source=Discord%20Widget&utm_medium=Connect" target="_blank">
+                <img src={discordIcon} alt="discordIcon" />
+              </a>
             </div>
             <div>
               <img
