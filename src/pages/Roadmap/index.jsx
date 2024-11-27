@@ -21,10 +21,8 @@ const Roadmap = () => {
               borderTop: "15px solid rgb(109, 148, 111)",
               borderRadius: "5px",
             }}
-            contentArrowStyle={{
-              borderRight: "7px solid  rgba(var(--color-primary-800))",
-            }}
-            date="September 2024 - Now"
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            date="December 2024 - Now"
             iconStyle={{ background: "rgb(13, 107, 3)", color: "#fff" }}
             icon={<FaPlay />}
           >
@@ -36,7 +34,7 @@ const Roadmap = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="October 2024"
+            date="January 2025"
             contentStyle={{
               background: "rgba(var(--color-primary-800))",
               boxShadow: "none",
@@ -105,7 +103,7 @@ const Roadmap = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="December 2024"
+            date="February 2025"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
@@ -152,7 +150,7 @@ const Roadmap = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="March 2025"
+            date="April 2025"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
@@ -192,7 +190,7 @@ const Roadmap = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Jun 2025"
+            date="June 2025"
             iconStyle={{ background: "rgb(109, 148, 111)", color: "#fff" }}
             icon={<FaRocket />}
             contentStyle={{
