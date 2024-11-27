@@ -21,7 +21,7 @@ const Roadmap = () => {
           </div>
         </div>
         <div className="ml-2 mt-16 md:mt-5">
-          <h3 className="text-[15px] font-bold mb-4">October 2024</h3>
+          <h3 className="text-[15px] font-bold mb-4">December 2024</h3>
           <p className="text-[14px] ">Launch with basic games</p>
         </div>
       </div>
@@ -35,7 +35,7 @@ const Roadmap = () => {
         </div>
 
         <div className="ml-2 mt-16 md:mt-5">
-          <h3 className="text-[15px] font-bold mb-4">December 2024</h3>
+          <h3 className="text-[15px] font-bold mb-4">January 2025</h3>
           <p className="text-[14px] ">Boosters (NFT Collections)</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const Roadmap = () => {
           </div>
         </div>
         <div className="ml-2 mt-16 md:mt-5">
-          <h3 className="text-[15px] font-bold mb-4">January 2025</h3>
+          <h3 className="text-[15px] font-bold mb-4">February 2025</h3>
           <p className="text-[14px] ">New chains and tokens on games</p>
         </div>
       </div>
@@ -59,7 +59,7 @@ const Roadmap = () => {
           </div>
         </div>
         <div className="ml-2 mt-16 md:mt-5">
-          <h3 className="text-[15px] font-bold mb-4">March 2025</h3>
+          <h3 className="text-[15px] font-bold mb-4">April 2025</h3>
           <Link target="_blank" to="/roadmap">
             <div className="flex items-end">
               <p className="text-[14px] ">Read more</p>
