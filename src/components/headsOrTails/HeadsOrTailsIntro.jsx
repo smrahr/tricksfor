@@ -38,7 +38,7 @@ const HeadsOrTailsIntro = () => {
                 About the Game
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                The Heads or Tails game offers an engaging way to experience prediction gaming with cryptocurrency. Here's how it works:
+                The Heads or Tails game offers an engaging way to experience prediction gaming with cryptocurrency. Here&apos;s how it works:
               </p>
 
               {/* Features */}
@@ -59,7 +59,7 @@ const HeadsOrTailsIntro = () => {
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed pt-4">
-                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It's perfect for those looking to engage in some fun prediction while using their crypto assets.
+                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It&apos;s perfect for those looking to engage in some fun prediction while using their crypto assets.
               </p>
             </div>
 

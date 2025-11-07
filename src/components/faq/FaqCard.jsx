@@ -1,4 +1,5 @@
 import { faqData } from "@constants/faqData";
+import PropTypes from 'prop-types';
 
 const FaqCard = ({ handleAnswer, answer }) => {
   console.log(faqData, "faqData");
@@ -9,10 +10,10 @@ const FaqCard = ({ handleAnswer, answer }) => {
           Frequently Asked Questions
         </h2>
         <div className="w-full p-5 flex flex-col py-10 divide-y divide-slate-500">
-          {faqData.map((item, index) => (
-            <p
-              key={index}
-              className={`flex items-center text-[18px] py-5 transition-all duration-700 relative ${
+          {faqData.map((item) => (
+            <button
+              key={item.id}
+              className={`flex items-center text-[18px] py-5 transition-all duration-700 relative text-left w-full ${
                 answer?.id === item.id ? "text-[#3b9fd5]" : ""
               }`}
               onClick={() => handleAnswer(item.id)}
@@ -27,12 +28,19 @@ const FaqCard = ({ handleAnswer, answer }) => {
               >
                 {item.question}
               </span>
-            </p>
+            </button>
           ))}
         </div>
       </div>
     </div>
   );
+};
+
+FaqCard.propTypes = {
+  handleAnswer: PropTypes.func.isRequired,
+  answer: PropTypes.shape({
+    id: PropTypes.number,
+  }),
 };
 
 export default FaqCard;

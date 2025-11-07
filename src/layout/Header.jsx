@@ -3,6 +3,7 @@ import logoDesktop from "@assets/icon.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { FaRocket } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -159,6 +160,10 @@ const Header = ({ goToHowToWork }) => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  goToHowToWork: PropTypes.func,
 };
 
 export default Header;

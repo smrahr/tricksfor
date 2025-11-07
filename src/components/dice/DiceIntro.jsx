@@ -38,7 +38,7 @@ const DiceIntro = () => {
                 About the Game
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Experience the thrill of our high-stakes Dice Game! Predict the outcome and engage with seamless crypto payments for a chance to win big. Are you ready to test your luck and strategy? Here's how it works:
+                Experience the thrill of our high-stakes Dice Game! Predict the outcome and engage with seamless crypto payments for a chance to win big. Are you ready to test your luck and strategy? Here&apos;s how it works:
               </p>
 
               {/* Features */}
@@ -59,7 +59,7 @@ const DiceIntro = () => {
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed pt-4">
-                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It's perfect for those looking to engage in some fun prediction while using their crypto assets.
+                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It&apos;s perfect for those looking to engage in some fun prediction while using their crypto assets.
               </p>
             </div>
 

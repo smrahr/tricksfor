@@ -53,7 +53,7 @@ const Boosters = () => {
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Elevate your winnings with exclusive Boosters! When you secure a victory in the match, our unique NFT Boosters—staked directly from your wallet in the Tricksfor app—will enhance your rewards. Predict and win while your NFT is staked, and revel in the additional bonus earnings proportional to your NFT's multiplier effect.
+                Elevate your winnings with exclusive Boosters! When you secure a victory in the match, our unique NFT Boosters—staked directly from your wallet in the Tricksfor app—will enhance your rewards. Predict and win while your NFT is staked, and revel in the additional bonus earnings proportional to your NFT&apos;s multiplier effect.
               </p>
 
               {/* Booster Collections */}
@@ -90,7 +90,7 @@ const Boosters = () => {
               </div>
 
               <p className="text-[13px] md:text-[14px] text-gray-400 italic">
-                It's time to amplify your gaming success with Tricksfor!
+                It&apos;s time to amplify your gaming success with Tricksfor!
               </p>
             </div>
           </div>

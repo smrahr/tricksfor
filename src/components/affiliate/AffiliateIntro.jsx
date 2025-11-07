@@ -40,7 +40,7 @@ const AffiliateIntro = () => {
                 How Tricksfor Affiliate Works
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Affiliate marketing is a performance-based marketing strategy where individuals or companies, known as affiliates, promote a merchant's products or services and earn a commission for each sale or lead generated through their efforts.
+                Affiliate marketing is a performance-based marketing strategy where individuals or companies, known as affiliates, promote a merchant&apos;s products or services and earn a commission for each sale or lead generated through their efforts.
               </p>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
                 Join the Tricksfor affiliate program through any of these options and start earning rewards today!

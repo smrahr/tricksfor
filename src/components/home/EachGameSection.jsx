@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const EachGameSection = ({ game }) => {
   var linkPath = "games";
@@ -23,4 +24,13 @@ const EachGameSection = ({ game }) => {
     </div>
   );
 };
+
+EachGameSection.propTypes = {
+  game: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 export default EachGameSection;

@@ -1,4 +1,3 @@
-import aboutProject from "@assets/home/aboutProject.png";
 import aboutProject2 from "@assets/home/aboutProject2.png";
 import { FaInfoCircle } from "react-icons/fa";
 
