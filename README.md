@@ -2,6 +2,8 @@
 
 Official landing page for [TricksFor.com](https://www.tricksfor.com) - A revolutionary blockchain-based gaming platform featuring provably fair games, NFT boosters, and affiliate rewards.
 
+[![Build and Deploy](https://github.com/Tricksfor-Organization/Landing/actions/workflows/build.yml/badge.svg)](https://github.com/Tricksfor-Organization/Landing/actions/workflows/build.yml)
+[![Code Quality](https://github.com/Tricksfor-Organization/Landing/actions/workflows/quality.yml/badge.svg)](https://github.com/Tricksfor-Organization/Landing/actions/workflows/quality.yml)
 ![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF?logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.18-38B2AC?logo=tailwind-css&logoColor=white)
