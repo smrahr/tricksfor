@@ -5,7 +5,7 @@ import { FaRocket } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-br from-primary-800/80 to-primary-900/80 backdrop-blur-sm border-2 border-primary-700/50 rounded-bl-[50px] md:rounded-[50px] m-0 md:m-5 p-8 md:p-12 shadow-xl">
+    <div className="bg-gradient-to-br from-primary-800/80 to-primary-900/80 backdrop-blur-sm border-2 border-primary-700/50 rounded-bl-[50px] md:rounded-[50px] m-0 md:m-5 p-8 md:p-12 shadow-xl relative z-10">
       <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-8">
         <div className="pt-[108px] w-[278px] block md:hidden">
           <img src={heriImage} alt="tricksfor" className="drop-shadow-2xl" />

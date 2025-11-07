@@ -1,5 +1,4 @@
-import logoMobile from "@assets/icon.png";
-import logoDesktop from "@assets/icon.png";
+import logo from "@assets/icon.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { FaRocket } from "react-icons/fa";
@@ -26,29 +25,29 @@ const gameMenu = [
 const Header = ({ goToHowToWork }) => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [openGameMenuMob, setOpenMenuHandlerMob] = useState(false);
+  const [openGameMenuMob, setOpenGameMenuMob] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   const handleClickGameMob = () => {
-    setOpenMenuHandlerMob(!openGameMenuMob);
+    setOpenGameMenuMob(!openGameMenuMob);
   };
 
   useEffect(() => {
     setIsOpen(false);
-    setOpenMenuHandlerMob(false);
+    setOpenGameMenuMob(false);
   }, [pathname]);
 
   return (
-    <div className="pt-0 md:pt-[48px] mx-5">
-      <div className="block md:hidden w-full absolute top-0 left-0">
-        <div className="flex justify-between px-[22px] py-[86px] relative">
-          <div className="relative">
+    <div className="pt-0 md:pt-[48px] mx-5 relative z-50">
+      <div className="block md:hidden w-full absolute top-0 left-0 z-50">
+        <div className="flex justify-between items-center px-[22px] py-[86px] relative z-50">
+          <div className="relative flex items-center">
             <button
               onClick={handleClick}
-              className={!isOpen ? "block" : "hidden"}
+              className={isOpen ? "hidden" : "block"}
             >
               <CiMenuBurger onClick={() => setIsOpen(true)} color="white" size={28} />
             </button>
@@ -66,12 +65,12 @@ const Header = ({ goToHowToWork }) => {
                   </button>
                 </div>
                 <ul className="flex flex-col">
-                  {navList.map((item, index) => (
-                    <li
-                      key={item.id}
-                      className={`${index !== navList.length - 1 ? 'border-b border-primary-700/50' : ''}`}
-                    >
-                      {item.id === 2 ? (
+                  {navList.map((item, index) => {
+                    const isLastItem = index === navList.length - 1;
+                    
+                    let content;
+                    if (item.id === 2) {
+                      content = (
                         <div className="relative">
                           <button
                             className="text-[15px] text-white hover:text-purple-400 transition-colors duration-200 p-4 w-full text-left"
@@ -80,10 +79,10 @@ const Header = ({ goToHowToWork }) => {
                           >
                             {item.linkName}
                           </button>
-                          <div className={`${!openGameMenuMob ? "hidden" : "block"} bg-primary-900/50`}>
+                          <div className={openGameMenuMob ? "block bg-primary-900/50" : "hidden bg-primary-900/50"}>
                             <ul className="py-2">
-                              {gameMenu.map((game, idx) => (
-                                <li key={idx}>
+                              {gameMenu.map((game) => (
+                                <li key={game.to}>
                                   <Link
                                     to={game.to}
                                     className="block px-8 py-2 text-[14px] text-gray-300 hover:text-white hover:bg-primary-700/30 transition-all duration-200"
@@ -95,7 +94,9 @@ const Header = ({ goToHowToWork }) => {
                             </ul>
                           </div>
                         </div>
-                      ) : item.id === 1 ? (
+                      );
+                    } else if (item.id === 1) {
+                      content = (
                         <button
                           className="text-[15px] text-white hover:text-purple-400 transition-colors duration-200 p-4 w-full text-left"
                           type="button"
@@ -103,16 +104,27 @@ const Header = ({ goToHowToWork }) => {
                         >
                           {item.linkName}
                         </button>
-                      ) : (
+                      );
+                    } else {
+                      content = (
                         <Link
                           className="text-[15px] text-white hover:text-purple-400 transition-colors duration-200 p-4 block"
                           to={item.to}
                         >
                           {item.linkName}
                         </Link>
-                      )}
+                      );
+                    }
+                    
+                    return (
+                      <li
+                        key={item.id}
+                        className={isLastItem ? '' : 'border-b border-primary-700/50'}
+                      >
+                        {content}
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -121,7 +133,7 @@ const Header = ({ goToHowToWork }) => {
             <Link to="/">
               <div className="relative group">
                 <img
-                  src={logoMobile}
+                  src={logo}
                   alt="logo"
                   className="rounded-[25px] w-[70px] h-[70px] transition-transform duration-300 group-hover:scale-110"
                 />
@@ -137,7 +149,7 @@ const Header = ({ goToHowToWork }) => {
             <Link to="/">
               <div className="relative group">
                 <img
-                  src={logoDesktop}
+                  src={logo}
                   alt="logo"
                   className="rounded-[25px] w-[70px] h-[70px] transition-transform duration-300 group-hover:scale-110"
                 />
