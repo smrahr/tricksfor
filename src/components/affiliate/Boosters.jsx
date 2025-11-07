@@ -1,80 +1,101 @@
-import CoinBoosters from "@assets/games/CoinBoosters.jpg";
-import CoinBoostersMob from "@assets/games/CoinBoostersMob.jpg";
+import BoostersIMG from "@assets/games/DiceBoosters.jpg";
+import BoostersMobIMG from "@assets/games/DiceBoostersMob.jpg";
+import { FaRocket } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Boosters = () => {
+  const boosterCollections = [
+    {
+      name: "Normal Coin Collection",
+      multiplier: "2x",
+      link: "/"
+    },
+    {
+      name: "Premium Coin Collection",
+      multiplier: "3x",
+      link: "/"
+    },
+    {
+      name: "Golden Coin Collection",
+      multiplier: "5x",
+      link: "/"
+    }
+  ];
+
   return (
-    <div className="m-5 mt-[72px]">
-      <div className="p-5 flex flex-col  items-start gap-2 dark:bg-primary-800 rounded-bl-[50px] md:rounded-[50px]">
-        <h3 className="text-[28px] font-bold pl-0 md:pl-10 ">
-          Get benefit of BOOSTERS
-        </h3>
-        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-          <div className="hidden md:block w-full md:w-[48%] ">
-            <div className="flex justify-center overflow-hidden rounded-[50px]">
-              <img src={CoinBoosters} alt="HeadsOrTailsIntro" />
+    <div className="dark:bg-primary-900 py-10 px-4">
+      <div className="container max-w-[1152px] mx-auto">
+        <div className="bg-gradient-to-br from-primary-800/80 to-primary-900/80 backdrop-blur-sm border-2 border-primary-700/50 rounded-[50px] p-6 md:p-10 shadow-xl">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            {/* Image */}
+            <div className="w-full md:w-1/2">
+              <div className="rounded-[30px] overflow-hidden shadow-2xl border-4 border-primary-700/50">
+                <img
+                  src={BoostersIMG}
+                  alt="Boosters"
+                  className="hidden md:block w-full h-auto"
+                />
+                <img
+                  src={BoostersMobIMG}
+                  alt="Boosters"
+                  className="block md:hidden w-full h-auto"
+                />
+              </div>
             </div>
-          </div>
-          <div className="block md:hidden w-full md:w-[48%] mb-5">
-            <div className="flex justify-center overflow-hidden rounded-[50px] mt-5">
-              <img src={CoinBoostersMob} alt="HeadsOrTailsIntro" />
+
+            {/* Text Content */}
+            <div className="w-full md:w-1/2 space-y-6">
+              <div className="flex items-center gap-3">
+                <FaRocket className="text-purple-400 w-8 h-8" />
+                <h2 className="text-[24px] md:text-[28px] font-bold text-white">
+                  Get Benefit of Boosters
+                </h2>
+              </div>
+
+              <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
+                Elevate your winnings with exclusive Boosters! When you secure a victory in the match, our unique NFT Boosters—staked directly from your wallet in the Tricksfor app—will enhance your rewards. Predict and win while your NFT is staked, and revel in the additional bonus earnings proportional to your NFT's multiplier effect.
+              </p>
+
+              {/* Booster Collections */}
+              <div className="space-y-4">
+                {boosterCollections.map((booster) => (
+                  <div
+                    key={booster.name}
+                    className="group bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-2 border-purple-500/30 rounded-xl p-4 hover:border-purple-500/60 transition-all duration-300 hover:scale-105"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <FaRocket className="w-4 h-4 text-purple-400" />
+                          <span className="text-[15px] md:text-[16px] font-bold text-white">
+                            {booster.name}
+                          </span>
+                        </div>
+                        <p className="text-[13px] md:text-[14px] text-gray-300">
+                          Check it out on{" "}
+                          <Link
+                            to={booster.link}
+                            className="text-blue-400 hover:text-blue-300 underline"
+                          >
+                            OpenSea
+                          </Link>
+                        </p>
+                      </div>
+                      <span className="text-[20px] md:text-[24px] font-bold text-purple-400">
+                        {booster.multiplier}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-[13px] md:text-[14px] text-gray-400 italic">
+                It's time to amplify your gaming success with Tricksfor!
+              </p>
             </div>
-          </div>
-          <div className="pl-0 md:pl-10 w-full md:w-[48%]">
-            <p className="text-[14px]">
-              Elevate your winnings with exclusive Boosters! When you secure a
-              victory in the match, our unique NFT Boosters—staked directly from
-              your wallet in the Tricksfor app—will enhance your rewards. Predict
-              and win while your NFT is staked, and revel in the additional
-              bonus earnings proportional to your NFT’s multiplier effect. It’s
-              time to amplify your gaming success with Tricksfor! Here are list
-              of NFT boosters that amplify the your reward
-            </p>
-            <ul className="w-full list-disc text-[14px] pl-10">
-              <li>
-                <div>
-                  <span className="font-bold">Normal Coin Collection:</span>
-                  <span>2x</span>
-                </div>
-                <p>
-                  Check it out on
-                  <Link to="/" className="text-[#3b9fd5]">
-                    OpenSea
-                  </Link>
-                  .
-                </p>
-              </li>
-              <li>
-                <div>
-                  <span className="font-bold">Premium Coin Collection:</span>
-                  <span>3x</span>
-                </div>
-                <p>
-                  Check it out on
-                  <Link to="/" className="text-[#3b9fd5]">
-                    OpenSea
-                  </Link>
-                  .
-                </p>
-              </li>
-              <li>
-                <div>
-                  <span className="font-bold">Golden Coin Collection:</span>
-                  <span>5x</span>
-                </div>
-                <p>
-                  Check it out on
-                  <Link to="/" className="text-[#3b9fd5]">
-                    OpenSea
-                  </Link>
-                  .
-                </p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
-      {/*  */}
     </div>
   );
 };
