@@ -43,9 +43,9 @@ const RockPaperScissorIntro = () => {
 
               {/* Features */}
               <div className="space-y-4">
-                {features.map((feature, index) => (
+                {features.map((feature) => (
                   <div
-                    key={index}
+                    key={feature.title}
                     className="group bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-500/30 rounded-2xl p-4 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg"
                   >
                     <h3 className="text-[16px] md:text-[18px] font-bold text-white mb-2">
