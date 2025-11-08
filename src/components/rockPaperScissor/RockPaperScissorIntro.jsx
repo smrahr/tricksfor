@@ -5,16 +5,19 @@ import { FaHandRock } from "react-icons/fa";
 const RockPaperScissorIntro = () => {
   const features = [
     {
-      title: "Prediction",
-      description: "Players place their predictions on whether the hand will land on rock, paper or scissor."
+      id: "classic-choices",
+      title: "Classic Choices",
+      description: "Pick Rock, Paper, or Scissors and place your bet on your choice."
     },
     {
-      title: "Crypto Payment",
-      description: "Predictions are made using various cryptocurrencies (right now MATIC is the only option), providing a secure and fast transaction process."
+      id: "crypto-payment",
+      title: "Fast Crypto Betting",
+      description: "Bet using MATIC (Polygon network). Secure, fast transactions with low fees."
     },
     {
-      title: "Guessing the Future",
-      description: "The game tests players' ability to predict the outcome, adding an element of anticipation and strategy."
+      id: "strategic",
+      title: "Strategic Gameplay",
+      description: "33% chance to win each round. Think strategically and predict which option will dominate!"
     }
   ];
 
@@ -38,14 +41,14 @@ const RockPaperScissorIntro = () => {
                 About the Game
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Imagine a world where the classic game of Rock, Paper, Scissors gets a modern twist with the integration of cryptocurrency. In this high-stakes version, players don&apos;t just throw their hands; they throw down digital currency on their chosen champion - be it rock, paper, or scissors. Here&apos;s how it works:
+                The childhood classic meets blockchain gaming! Choose Rock, Paper, or Scissors, place your crypto bet, and see if your choice beats the competition. Here&apos;s how it works:
               </p>
 
               {/* Features */}
               <div className="space-y-4">
                 {features.map((feature) => (
                   <div
-                    key={feature.title}
+                    key={feature.id}
                     className="group bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-500/30 rounded-2xl p-4 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg"
                   >
                     <h3 className="text-[16px] md:text-[18px] font-bold text-white mb-2">
@@ -59,7 +62,7 @@ const RockPaperScissorIntro = () => {
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed pt-4">
-                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It&apos;s perfect for those looking to engage in some fun prediction while using their crypto assets.
+                With 3 options and fair odds, this game offers the perfect balance between strategy and chance. Will you go with the reliable Rock, the versatile Paper, or the sharp Scissors?
               </p>
             </div>
 

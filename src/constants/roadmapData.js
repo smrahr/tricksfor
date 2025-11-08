@@ -41,7 +41,7 @@ export const roadmapData = [
     date: "December 2024 - Now",
     title: "Launch",
     description:
-      "Launch with basic games (RPS, Heads or Tails, Dice) on polygon network",
+      "Platform launched with three classic games (Rock Paper Scissors, Heads or Tails, Dice) on Polygon network with MATIC support.",
     status: ROADMAP_STATUS.COMPLETED,
     icon: FaPlay,
     className: "vertical-timeline-element--work",
@@ -51,9 +51,9 @@ export const roadmapData = [
   {
     id: 2,
     date: "January 2025",
-    title: "Boosters",
+    title: "NFT Boosters",
     description:
-      "Unlock the power of Game Boosters! Purchase exclusive NFT collections on OpenSea, stake them directly from your wallet in our app, and watch your game rewards multiply. Win big with boosted rewards tied to your NFTs!",
+      "Launch exclusive NFT collections on OpenSea! Stake NFTs directly from your wallet to multiply your game rewards. Win bigger with 2x, 3x, 5x, and even 10x multipliers!",
     status: ROADMAP_STATUS.IN_PROGRESS,
     icon: FaRocket,
     className: "vertical-timeline-element--work",
@@ -61,9 +61,9 @@ export const roadmapData = [
   {
     id: 3,
     date: "Feature",
-    title: "Big Blind Games",
+    title: "High Stakes Mode",
     description:
-      "Get ready for an adrenaline rush! We're launching games with a 10x minimum payment for players who crave higher stakes and bigger rewards. Dare to risk more and reap the ultimate rewards!",
+      "For serious players only! New high-roller games with 10x minimum bets and massive reward pools. Higher risk, bigger thrills, legendary payouts!",
     status: ROADMAP_STATUS.FUTURE,
     icon: FaPlaneDeparture,
     className: "vertical-timeline-element--work",
@@ -74,7 +74,7 @@ export const roadmapData = [
     id: 4,
     date: "Feature",
     title: "RPS Fire Mode",
-    description: "Launch Rock paper scissor fire game mode",
+    description: "An intense, fast-paced Rock Paper Scissors variant with rapid rounds and escalating stakes!",
     status: ROADMAP_STATUS.FUTURE,
     icon: FaPlaneDeparture,
     className: "vertical-timeline-element--work",
@@ -84,9 +84,9 @@ export const roadmapData = [
   {
     id: 5,
     date: "February 2025",
-    title: "New Chains On Games",
+    title: "Multi-Chain Expansion",
     description:
-      "Exciting news! We're expanding our game offerings to new horizons. Soon, you'll be able to play on chains like Optimism, Arbitrum, BSC, and Avalanche, and use popular ERC20 tokens like USDC and USDT. Get ready for a whole new level of gaming!",
+      "Play across multiple blockchains! Expanding to Optimism, Arbitrum, BSC, and Avalanche. Plus, bet with popular tokens like USDC and USDT. More chains, more options, more wins!",
     status: ROADMAP_STATUS.IN_PROGRESS,
     icon: FaRocket,
     className: "vertical-timeline-element--work",
@@ -95,7 +95,7 @@ export const roadmapData = [
     id: 6,
     date: "Feature",
     title: "Tournaments",
-    description: "Run tournaments for top rank players or owner of tournament NFTs",
+    description: "Compete in exclusive tournaments for top players and tournament NFT holders. Prove your skills and win massive prizes!",
     status: ROADMAP_STATUS.FUTURE,
     icon: FaPlaneDeparture,
     className: "vertical-timeline-element--work",
@@ -105,8 +105,8 @@ export const roadmapData = [
   {
     id: 7,
     date: "April 2025",
-    title: "Telegram Games",
-    description: "Launch current games in telegram on TON chain",
+    title: "Telegram Integration",
+    description: "Play all your favorite games directly in Telegram on the TON blockchain. Gaming made social and accessible!",
     status: ROADMAP_STATUS.IN_PROGRESS,
     icon: FaRocket,
     className: "vertical-timeline-element--work",
@@ -114,8 +114,8 @@ export const roadmapData = [
   {
     id: 8,
     date: "Feature",
-    title: "New game",
-    description: "Launch new game (Rollet would be the best option, who knows...)",
+    title: "New Casino Game",
+    description: "A brand new game is coming! Roulette is the top contender, but who knows what surprises await...",
     status: ROADMAP_STATUS.FUTURE,
     icon: FaRocket,
     className: "vertical-timeline-element--work",
@@ -125,9 +125,9 @@ export const roadmapData = [
   {
     id: 9,
     date: "June 2025",
-    title: "Strategic Game",
+    title: "Strategic Campaign Game",
     description:
-      "Launch strategic game containing three phases (Each phase duration is around 60 to 90 days)",
+      "An epic multi-phase strategic game experience! Each campaign runs 60-90 days with evolving gameplay and growing rewards.",
     status: ROADMAP_STATUS.IN_PROGRESS,
     icon: FaRocket,
     className: "vertical-timeline-element--education",
@@ -135,8 +135,8 @@ export const roadmapData = [
   {
     id: 10,
     date: "September 2025",
-    title: "Tricksfor Coin",
-    description: "Launch Tricksfor token with the third phase of strategic game",
+    title: "TricksFor Token Launch",
+    description: "Launch of the official TricksFor token ($TRICKS) during the final phase of our strategic game. Join the revolution!",
     status: ROADMAP_STATUS.IN_PROGRESS,
     icon: FaRocket,
     className: "vertical-timeline-element--education",

@@ -48,12 +48,12 @@ const Boosters = () => {
               <div className="flex items-center gap-3">
                 <FaRocket className="text-purple-400 w-8 h-8" />
                 <h2 className="text-[24px] md:text-[28px] font-bold text-white">
-                  Get Benefit of Boosters
+                  Multiply Your Wins with Boosters
                 </h2>
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Elevate your winnings with exclusive Boosters! When you secure a victory in the match, our unique NFT Boosters—staked directly from your wallet in the Tricksfor app—will enhance your rewards. Predict and win while your NFT is staked, and revel in the additional bonus earnings proportional to your NFT&apos;s multiplier effect.
+                Want bigger rewards? Stake NFT Boosters from your wallet in the TricksFor app and watch your winnings multiply! When you win a match with boosters staked, you&apos;ll earn bonus rewards based on each NFT&apos;s multiplier.
               </p>
 
               {/* Booster Collections */}
@@ -90,7 +90,7 @@ const Boosters = () => {
               </div>
 
               <p className="text-[13px] md:text-[14px] text-gray-400 italic">
-                It&apos;s time to amplify your gaming success with Tricksfor!
+                Stack multiple boosters and combine them with streaks for massive wins!
               </p>
             </div>
           </div>

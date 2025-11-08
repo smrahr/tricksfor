@@ -5,19 +5,22 @@ import { FaLink, FaWallet, FaCode } from "react-icons/fa";
 const AffiliateIntro = () => {
   const methods = [
     {
+      id: "referral-link",
       icon: FaLink,
-      title: "Share referral link",
-      description: "Get your unique referral link from the Tricksfor app and share it with your friends or on social media. Anyone who joins Tricksfor through your link will become your referee, earning you rewards!"
+      title: "Share Your Referral Link",
+      description: "Grab your unique link from the Tricksfor app and share it anywhere—friends, social media, your community. Anyone who signs up through your link becomes your referee!"
     },
     {
+      id: "wallet-address",
       icon: FaWallet,
-      title: "Share your wallet address",
-      description: "Invite your friends or subscribers to manually set their referral by submitting your wallet address. It's a simple and secure way to earn rewards together!"
+      title: "Share Your Wallet Address",
+      description: "Your friends can manually enter your wallet address as their referrer when they sign up. Simple and secure!"
     },
     {
+      id: "referral-code",
       icon: FaCode,
-      title: "Share your referral code",
-      description: "For enhanced privacy in manual mode, share your referral code instead of your wallet address."
+      title: "Share Your Referral Code",
+      description: "Prefer more privacy? Share your unique referral code instead of your wallet address. Same rewards, more discretion!"
     }
   ];
 
@@ -37,22 +40,22 @@ const AffiliateIntro = () => {
             {/* Text Content */}
             <div className="w-full md:w-1/2 space-y-6">
               <h2 className="text-[24px] md:text-[28px] font-bold text-white">
-                How Tricksfor Affiliate Works
+                How the Tricksfor Affiliate Program Works
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Affiliate marketing is a performance-based marketing strategy where individuals or companies, known as affiliates, promote a merchant&apos;s products or services and earn a commission for each sale or lead generated through their efforts.
+                Earn passive income by sharing TricksFor with your network! Our affiliate program rewards you every time your referrals play games or buy NFTs. It&apos;s completely free to join and easy to get started.
               </p>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Join the Tricksfor affiliate program through any of these options and start earning rewards today!
+                Choose any of these simple methods to start earning:
               </p>
 
               {/* Methods Cards */}
               <div className="space-y-4 mt-6">
-                {methods.map((method, index) => {
+                {methods.map((method) => {
                   const Icon = method.icon;
                   return (
                     <div
-                      key={index}
+                      key={method.id}
                       className="group bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-500/30 rounded-2xl p-4 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg hover:scale-105"
                     >
                       <div className="flex items-start gap-3">

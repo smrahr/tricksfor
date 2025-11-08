@@ -13,10 +13,10 @@ const AboutProject = () => {
         </div>
       </div>
       <h2 className="text-[32px] md:text-[40px] font-bold mb-6 text-center md:text-left bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-        About project
+        About Tricksfor
       </h2>
       <p className="text-[16px] md:text-[18px] text-gray-300 text-center md:text-left leading-relaxed">
-        The developer team has recently launched an innovative game application that integrates cryptocurrency payments based on predictions across various games. This blockchain-based platform ensures full transparency, allowing players to engage in a secure and fair gaming environment.
+        TricksFor is your crypto gaming destination where skill meets blockchain transparency. Play classic games with a twist—predict outcomes, stake crypto, and win big! Every match runs on a unique blockchain wallet address, ensuring completely fair and verifiable gameplay. No hidden tricks, just transparent fun and real rewards.
       </p>
     </div>
   );

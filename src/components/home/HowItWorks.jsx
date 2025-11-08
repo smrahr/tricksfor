@@ -8,25 +8,25 @@ const RoadmapContent = [
     id: 1,
     src: Roadmap,
     icon: FaWallet,
-    title: "Step 1: Match Setup",
+    title: "Step 1: Connect Your Wallet",
     description:
-      "The game starts with a new wallet address specified for the current match.",
+      "Each match starts with a fresh, dedicated wallet address for complete transparency. Connect your Web3 wallet to begin.",
   },
   {
     id: 2,
     src: Roadmap,
     icon: FaChartLine,
-    title: "Step 2: Place Predictions",
+    title: "Step 2: Analyze & Predict",
     description:
-      "Players forecast outcomes using match statistics and the winner's rewards, with their payments tied to each prediction option.",
+      "Review match stats, see what others are predicting, and place your bet using crypto on your chosen outcome.",
   },
   {
     id: 3,
     src: Roadmap,
     icon: FaTrophy,
-    title: "Step 3: Winners Rewarded",
+    title: "Step 3: Win & Get Rewarded",
     description:
-      "Each match will conclude at a specified time. The application will then randomly select a winning option, and the winners will receive rewards from the losers.",
+      "When the match ends, the winning outcome is randomly selected. Winners automatically receive their rewards from the prize pool!",
   },
 ];
 

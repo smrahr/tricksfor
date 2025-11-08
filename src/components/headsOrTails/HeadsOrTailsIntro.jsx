@@ -5,16 +5,19 @@ import { FaCoins } from "react-icons/fa";
 const HeadsOrTailsIntro = () => {
   const features = [
     {
-      title: "Prediction",
-      description: "Players place their predictions on whether a virtual coin will land on Heads or Tails."
+      id: "pick-side",
+      title: "Pick Your Side",
+      description: "Simple choice—Heads or Tails. Place your bet on which side the coin will land."
     },
     {
-      title: "Crypto Payment",
-      description: "Predictions are made using various cryptocurrencies (right now MATIC is the only option), providing a secure and fast transaction process."
+      id: "crypto-payment",
+      title: "Fast Crypto Betting",
+      description: "Bet using MATIC (Polygon network). Quick, secure transactions with minimal fees."
     },
     {
-      title: "Guessing the Future",
-      description: "The game tests players' ability to predict the coin's landing side, adding an element of anticipation and strategy."
+      id: "odds",
+      title: "50/50 Odds",
+      description: "The classic coin flip with fair odds. A perfect balance of risk and reward!"
     }
   ];
 
@@ -38,14 +41,14 @@ const HeadsOrTailsIntro = () => {
                 About the Game
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                The Heads or Tails game offers an engaging way to experience prediction gaming with cryptocurrency. Here&apos;s how it works:
+                The timeless coin flip game, now powered by crypto! Call Heads or Tails, place your bet, and let fate decide. Here&apos;s what makes it exciting:
               </p>
 
               {/* Features */}
               <div className="space-y-4">
-                {features.map((feature, index) => (
+                {features.map((feature) => (
                   <div
-                    key={index}
+                    key={feature.id}
                     className="group bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-500/30 rounded-2xl p-4 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg"
                   >
                     <h3 className="text-[16px] md:text-[18px] font-bold text-white mb-2">
@@ -59,7 +62,7 @@ const HeadsOrTailsIntro = () => {
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed pt-4">
-                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It&apos;s perfect for those looking to engage in some fun prediction while using their crypto assets.
+                With a 50% chance to win, this is the perfect entry point for new players. Simple, fast, and fair—just like the classic game we all know and love!
               </p>
             </div>
 

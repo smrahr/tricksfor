@@ -6,15 +6,15 @@ const AffiliateReward = () => {
   const rewards = [
     {
       icon: FaGamepad,
-      title: "Game Rewards",
+      title: "Game Winnings",
       percentage: "1%",
-      description: "When your referee wins a match and earns rewards, you'll receive 1% of their reward value as a bonus!"
+      description: "Every time your referee wins a match, you automatically earn 1% of their winnings. The more they play and win, the more you earn!"
     },
     {
       icon: FaImage,
-      title: "NFT Rewards",
+      title: "NFT Purchases",
       percentage: "10%",
-      description: "When your referee purchases an NFT booster from any of our collections, you'll earn 10% of the trade value as a reward!"
+      description: "When your referee buys an NFT booster from any TricksFor collection, you get 10% of the purchase value. That's instant passive income!"
     }
   ];
 

@@ -5,19 +5,19 @@ import { FaThumbsUp, FaExclamationTriangle } from "react-icons/fa";
 const ProsAndCons = () => {
   const pros = [
     {
-      title: "Win value: very high",
-      description: "With a successful guess, you win five out of two groups of predictions."
+      title: "Huge Winning Potential",
+      description: "Win big! When you guess correctly, you collect from all 5 other number groups. Your payout is significantly higher than other games."
     }
   ];
 
   const cons = [
     {
-      title: "Risk: very high",
-      description: "There is only 16.66% chance to win the game."
+      title: "Lower Win Probability",
+      description: "Only 16.66% chance to win (1 in 6). Higher risk compared to other games."
     },
     {
-      title: "Difficulty: very high",
-      description: "There are six options available to place your prediction."
+      title: "More Choices to Consider",
+      description: "With 6 different options, picking the right number requires more strategy and luck."
     }
   ];
 
