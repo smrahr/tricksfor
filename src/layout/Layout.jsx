@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import PropTypes from 'prop-types';
 
 const Dashbord = ({ children, goToHowToWork }) => {
   return (
@@ -13,6 +14,11 @@ const Dashbord = ({ children, goToHowToWork }) => {
       </div>
     </div>
   );
+};
+
+Dashbord.propTypes = {
+  children: PropTypes.node,
+  goToHowToWork: PropTypes.func,
 };
 
 export default Dashbord;

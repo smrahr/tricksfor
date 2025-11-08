@@ -1,0 +1,59 @@
+name: Code Quality
+
+on:
+  push:
+    branches:
+      - '**'  # Run on all branches
+  pull_request:
+    branches:
+      - '**'  # Run on all PRs
+
+jobs:
+  quality-check:
+    name: Code Quality Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for better analysis
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run ESLint with report
+        run: |
+          npm run lint > eslint-report.txt 2>&1 || true
+          
+      - name: Check for console statements
+        run: |
+          echo "### Console Statement Check 🔍" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if grep -r "console\." src/ --exclude-dir=node_modules; then
+            echo "⚠️ Found console statements in source code" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ No console statements found" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Check file sizes
+        run: |
+          echo "### Large Files Check 📏" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Files larger than 100KB:" >> $GITHUB_STEP_SUMMARY
+          find src/ -type f -size +100k -exec ls -lh {} \; >> $GITHUB_STEP_SUMMARY || echo "None found ✅" >> $GITHUB_STEP_SUMMARY
+          
+      - name: Count components
+        run: |
+          echo "### Project Statistics 📊" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**React Components:** $(find src/components -name '*.jsx' | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "**Pages:** $(find src/pages -name 'index.jsx' | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "**Total JSX Files:** $(find src/ -name '*.jsx' | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "**Total Lines of Code:** $(find src/ -name '*.jsx' -o -name '*.js' | xargs wc -l | tail -1)" >> $GITHUB_STEP_SUMMARY

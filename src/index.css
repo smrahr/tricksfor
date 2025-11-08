@@ -292,3 +292,20 @@
   /* min-height: 100vh; */
   font-family: Poppins;
 }
+
+/* FAQ Answer Styling */
+.faq-answer ol {
+  list-style-type: decimal;
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer li {
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer strong {
+  font-weight: 600;
+  color: #60a5fa;
+}

@@ -1,6 +1,4 @@
 import AffiliateIntro from "@components/affiliate/AffiliateIntro";
-import Streaks from "@components/affiliate/Streaks";
-import Boosters from "@components/affiliate/Boosters";
 import AffiliateReward from "@components/affiliate/AffiliateReward";
 
 const Affiliate = () => {

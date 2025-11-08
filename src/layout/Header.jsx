@@ -1,9 +1,8 @@
-import logoMobile from "@assets/icon.png";
-import burgerMenu from "@assets/header/burgerMenu.png";
-import logoDesktop from "@assets/icon.png";
-import arrow from "@assets/header/arrow.png";
+import logo from "@assets/icon.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
+import { FaRocket } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -26,106 +25,120 @@ const gameMenu = [
 const Header = ({ goToHowToWork }) => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [openGameMenuMob, setOpenMenuHandlerMob] = useState(false);
+  const [openGameMenuMob, setOpenGameMenuMob] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   const handleClickGameMob = () => {
-    setOpenMenuHandlerMob(!openGameMenuMob);
+    setOpenGameMenuMob(!openGameMenuMob);
   };
 
   useEffect(() => {
     setIsOpen(false);
-    setOpenMenuHandlerMob(false);
+    setOpenGameMenuMob(false);
   }, [pathname]);
 
   return (
-    <div className="pt-0 md:pt-[48px] mx-5">
-      <div className="block md:hidden w-full absolute top-0 left-0 ">
-        <div className="flex justify-between px-[22px] py-[86px] relative">
-          <div className="relative">
+    <div className="pt-0 md:pt-[48px] mx-5 relative z-50">
+      <div className="block md:hidden w-full absolute top-0 left-0 z-50">
+        <div className="flex justify-between items-center px-[22px] py-[86px] relative z-50">
+          <div className="relative flex items-center">
             <button
               onClick={handleClick}
-              className={!isOpen ? "block" : "hidden"}
+              className={isOpen ? "hidden" : "block"}
             >
-              <CiMenuBurger onClick={() => setIsOpen(true)} color="white" />
+              <CiMenuBurger onClick={() => setIsOpen(true)} color="white" size={28} />
             </button>
             <div
-              className={`absolute top-0 left-0 w-[200px] z-1000 ${
+              className={`absolute top-0 left-0 w-[240px] z-1000 ${
                 isOpen ? "block" : "hidden"
               }`}
               style={{ zIndex: 1000 }}
             >
-              <RxCross1 onClick={() => setIsOpen(false)} color="black" />
-              <ul className="flex flex-col items-center justify-between min-h-[250px] rounded-md text-[16px]  bg-black">
-                {navList.map((item) => (
-                  <li
-                    key={item.id}
-                    className="border-b border-gray-400 opacity-55 p-4 rounded-md w-full"
-                  >
-                    {item.id === 2 ? (
-                      <div className="relative">
+              <div className="bg-gradient-to-br from-primary-800 to-primary-900 border-2 border-primary-700 rounded-[20px] shadow-2xl overflow-hidden">
+                <div className="p-4 border-b border-primary-700 flex justify-between items-center">
+                  <span className="text-[16px] font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Menu</span>
+                  <button onClick={() => setIsOpen(false)} className="hover:scale-110 transition-transform duration-200">
+                    <RxCross1 color="white" size={20} />
+                  </button>
+                </div>
+                <ul className="flex flex-col">
+                  {navList.map((item, index) => {
+                    const isLastItem = index === navList.length - 1;
+                    
+                    let content;
+                    if (item.id === 2) {
+                      content = (
+                        <div className="relative">
+                          <button
+                            className="text-[15px] text-white hover:text-purple-400 transition-colors duration-200 p-4 w-full text-left"
+                            type="button"
+                            onClick={handleClickGameMob}
+                          >
+                            {item.linkName}
+                          </button>
+                          <div className={openGameMenuMob ? "block bg-primary-900/50" : "hidden bg-primary-900/50"}>
+                            <ul className="py-2">
+                              {gameMenu.map((game) => (
+                                <li key={game.to}>
+                                  <Link
+                                    to={game.to}
+                                    className="block px-8 py-2 text-[14px] text-gray-300 hover:text-white hover:bg-primary-700/30 transition-all duration-200"
+                                  >
+                                    {game.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      );
+                    } else if (item.id === 1) {
+                      content = (
                         <button
-                          id="dropdownDefaultButton"
-                          data-dropdown-toggle="dropdown"
-                          className="text-md text-center inline-flex items-center"
+                          className="text-[15px] text-white hover:text-purple-400 transition-colors duration-200 p-4 w-full text-left"
                           type="button"
-                          onClick={handleClickGameMob}
+                          onClick={goToHowToWork}
                         >
                           {item.linkName}
                         </button>
-                        <div
-                          id="dropdown"
-                          className={`z-10 divide-y  ${
-                            !openGameMenuMob ? "hidden" : "block"
-                          }`}
+                      );
+                    } else {
+                      content = (
+                        <Link
+                          className="text-[15px] text-white hover:text-purple-400 transition-colors duration-200 p-4 block"
+                          to={item.to}
                         >
-                          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                            {gameMenu.map((item, index) => (
-                              <li key={index}>
-                                <Link
-                                  to={item.to}
-                                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >
-                                  {item.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    ) : item.id === 1 ? (
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="text-md text-center inline-flex items-center"
-                        type="button"
-                        onClick={goToHowToWork}
+                          {item.linkName}
+                        </Link>
+                      );
+                    }
+                    
+                    return (
+                      <li
+                        key={item.id}
+                        className={isLastItem ? '' : 'border-b border-primary-700/50'}
                       >
-                        {item.linkName}
-                      </button>
-                    ) : (
-                      <Link
-                        className="text-md text-center inline-flex items-center"
-                        to={item.to}
-                      >
-                        {item.linkName}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
+                        {content}
+                    </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           </div>
           <div>
             <Link to="/">
-              <img
-                src={logoMobile}
-                alt="logo"
-                className="rounded-[25px] w-[70px] h-[70px]"
-              />
+              <div className="relative group">
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="rounded-[25px] w-[70px] h-[70px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 rounded-[25px] bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
             </Link>
           </div>
         </div>
@@ -134,11 +147,14 @@ const Header = ({ goToHowToWork }) => {
         <div className="flex justify-between items-center mb-[48px]">
           <div>
             <Link to="/">
-              <img
-                src={logoDesktop}
-                alt="logo"
-                className="rounded-[25px] w-[70px] h-[70px]"
-              />
+              <div className="relative group">
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="rounded-[25px] w-[70px] h-[70px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 rounded-[25px] bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
             </Link>
           </div>
           <Navbar
@@ -146,20 +162,20 @@ const Header = ({ goToHowToWork }) => {
             gameMenu={gameMenu}
             goToHowToWork={goToHowToWork}
           />
-          <button className="border-2 rounded-full">
-            <Link target="_blank" to="https://app.tricksfor.com">
-              <div className="flex items-end p-2 w-[174px] h-[40px] justify-center ">
-                <p className="text-[18px]">Launch App</p>
-                <div className="w-[20px] h-[20px] ml-3">
-                  <img src={arrow} alt="arrow" />
-                </div>
-              </div>
-            </Link>
-          </button>
+          <Link target="_blank" to="https://app.tricksfor.com">
+            <button className="group bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 rounded-full px-6 py-2 h-[44px] flex items-center gap-2 transition-all duration-300 hover:scale-105 shadow-lg">
+              <FaRocket className="w-4 h-4 text-white group-hover:rotate-12 transition-transform duration-300" />
+              <span className="text-[16px] font-semibold text-white">Launch App</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  goToHowToWork: PropTypes.func,
 };
 
 export default Header;

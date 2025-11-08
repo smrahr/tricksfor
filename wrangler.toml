@@ -1,0 +1,8 @@
+# Cloudflare Pages configuration for TricksFor Landing
+# https://developers.cloudflare.com/pages/
+
+name = "tricksfor-landing"
+compatibility_date = "2025-11-07"
+
+[site]
+bucket = "./dist"
