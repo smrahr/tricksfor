@@ -79,7 +79,7 @@ const Header = ({ goToHowToWork }) => {
                           >
                             {item.linkName}
                           </button>
-                          <div className={openGameMenuMob ? "block bg-primary-900/50" : "hidden bg-primary-900/50"}>
+                          <div className={`${openGameMenuMob ? "block" : "hidden"} bg-primary-900/50`}>
                             <ul className="py-2">
                               {gameMenu.map((game) => (
                                 <li key={game.to}>
