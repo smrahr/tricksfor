@@ -6,18 +6,18 @@ const DiceIntro = () => {
   const features = [
     {
       id: "prediction",
-      title: "Prediction",
-      description: "Players place their predictions on whether the dice will land on one to six."
+      title: "Choose Your Number",
+      description: "Pick any number from 1 to 6 and place your bet on that outcome."
     },
     {
       id: "crypto-payment",
-      title: "Crypto Payment",
-      description: "Predictions are made using various cryptocurrencies (right now MATIC is the only option), providing a secure and fast transaction process."
+      title: "Fast Crypto Betting",
+      description: "Bet using MATIC (Polygon network). Fast, secure transactions with low fees."
     },
     {
       id: "guessing",
-      title: "Guessing the Future",
-      description: "The game tests players' ability to predict the dice's landing side, adding an element of anticipation and strategy."
+      title: "Test Your Luck",
+      description: "Will the dice land on your number? High risk means high rewards—one lucky roll could multiply your bet!"
     }
   ];
 
@@ -41,7 +41,7 @@ const DiceIntro = () => {
                 About the Game
               </h2>
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Experience the thrill of our high-stakes Dice Game! Predict the outcome and engage with seamless crypto payments for a chance to win big. Are you ready to test your luck and strategy? Here&apos;s how it works:
+                Roll the dice, predict the outcome, and win big with crypto! Our Dice Game is simple but exciting—guess which number will appear and multiply your bet. Here&apos;s how it works:
               </p>
 
               {/* Features */}
@@ -62,7 +62,7 @@ const DiceIntro = () => {
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed pt-4">
-                This game combines the thrill of gambling with the innovative use of cryptocurrency, offering a modern twist to the classic game of chance. It&apos;s perfect for those looking to engage in some fun prediction while using their crypto assets.
+                With 6 possible outcomes, you&apos;ve got a 16.6% chance to win—but when you do, you collect from 5 other prediction groups! It&apos;s high-risk, high-reward gaming at its finest.
               </p>
             </div>
 

@@ -16,21 +16,25 @@ import { Link } from "react-router-dom";
 const Games = () => {
   const gamesImages = [
     {
+      id: "games-overview",
       image: gameImage,
       title: "Tricksfor",
       description: "Games",
     },
     {
+      id: "coin-game",
       image: gameImageCoinLong,
       title: "Tricksfor",
       description: "Coin",
     },
     {
+      id: "rps-game",
       image: gameImageRPSLong,
       title: "Tricksfor",
       description: "RPS",
     },
     {
+      id: "dice-game",
       image: gameImageDiceLong,
       title: "Tricksfor",
       description: "Dice",
@@ -39,8 +43,8 @@ const Games = () => {
   return (
     <div className="pt-[72px] m-5">
       <div className="block md:hidden p-5">
-        {gamesImages.map((item, index) => (
-          <EachGameSection key={index} game={item} />
+        {gamesImages.map((item) => (
+          <EachGameSection key={item.id} game={item} />
         ))}
       </div>
       <div className="hidden md:block ">

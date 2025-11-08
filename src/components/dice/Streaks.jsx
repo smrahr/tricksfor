@@ -21,12 +21,12 @@ const Streaks = () => {
               <div className="flex items-center gap-3">
                 <FaFire className="text-orange-400 w-8 h-8" />
                 <h2 className="text-[24px] md:text-[28px] font-bold text-white">
-                  How Streaks Work
+                  Build Your Streak, Boost Your Rewards
                 </h2>
               </div>
 
               <p className="text-[14px] md:text-[15px] text-gray-300 leading-relaxed">
-                Elevate your gaming streak with consecutive predictions across various days, and seize the opportunity to amplify your bonus rewards with a victorious next prediction!
+                Play consistently and unlock massive reward multipliers! Keep your streak alive by playing at least one game each day. The longer you play, the bigger your bonuses when you win:
               </p>
 
               {/* Streak Milestones */}
