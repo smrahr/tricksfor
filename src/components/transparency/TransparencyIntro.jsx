@@ -3,7 +3,7 @@ import HeadsOrTailsIntroMobIMG from "@assets/games/HeadsOrTailsIntroMob.jpg";
 
 const TransparencyIntro = () => {
   return (
-    <div className="pt-[158px] m-5 md:pt-[0px]">
+    <div className="pt-[180px] m-5 md:pt-[0px]">
       <h2 className="text-[36px] md:text-[40px] pl-4 md:pl-10">
         Heads or Tails
       </h2>

@@ -5,21 +5,24 @@ import { FaDice } from "react-icons/fa";
 const DiceIntro = () => {
   const features = [
     {
+      id: "prediction",
       title: "Prediction",
       description: "Players place their predictions on whether the dice will land on one to six."
     },
     {
+      id: "crypto-payment",
       title: "Crypto Payment",
       description: "Predictions are made using various cryptocurrencies (right now MATIC is the only option), providing a secure and fast transaction process."
     },
     {
+      id: "guessing",
       title: "Guessing the Future",
       description: "The game tests players' ability to predict the dice's landing side, adding an element of anticipation and strategy."
     }
   ];
 
   return (
-    <div className="dark:bg-primary-900 pt-[158px] md:pt-20 pb-10 px-4">
+    <div className="dark:bg-primary-900 pt-[180px] md:pt-20 pb-10 px-4">
       <div className="container max-w-[1152px] mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -43,9 +46,9 @@ const DiceIntro = () => {
 
               {/* Features */}
               <div className="space-y-4">
-                {features.map((feature, index) => (
+                {features.map((feature) => (
                   <div
-                    key={index}
+                    key={feature.id}
                     className="group bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-500/30 rounded-2xl p-4 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg"
                   >
                     <h3 className="text-[16px] md:text-[18px] font-bold text-white mb-2">

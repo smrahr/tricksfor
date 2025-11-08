@@ -1,0 +1,203 @@
+name: Release and Deploy
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v1.0.0
+  release:
+    types: [published, created]
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  release-checks:
+    name: Pre-Release Checks
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run linter
+        run: npm run lint
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Verify build
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "❌ Build failed - dist directory not found"
+            exit 1
+          fi
+          echo "✅ Build successful"
+
+  create-release-artifact:
+    name: Create Release Artifact
+    runs-on: ubuntu-latest
+    needs: release-checks
+    if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'release'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build production
+        run: npm run build
+        
+      - name: Create release archive
+        run: |
+          cd dist
+          tar -czf ../landing-${{ github.ref_name }}.tar.gz .
+          cd ..
+          
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-build
+          path: landing-*.tar.gz
+          retention-days: 90
+          
+      - name: Generate build info
+        run: |
+          echo "### Release Build Information 🚀" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Date:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Size:**" >> $GITHUB_STEP_SUMMARY
+          du -sh dist/ >> $GITHUB_STEP_SUMMARY
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: create-release-artifact
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    # Uncomment when production environment is created in GitHub:
+    # environment:
+    #   name: production
+    #   url: https://tricksfor.com  # Update with your production URL
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build production
+        run: npm run build
+        
+      - name: Download release artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-build
+          
+      # Uncomment and configure your deployment method:
+      
+      # Option 1: Deploy to Cloudflare Pages
+      # - name: Publish to Cloudflare Pages
+      #   uses: cloudflare/pages-action@v1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: tricksfor-landing
+      #     directory: dist
+      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      
+      # Option 2: Deploy to Vercel
+      # - name: Deploy to Vercel
+      #   uses: amondnet/vercel-action@v25
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #     vercel-args: '--prod'
+      #     working-directory: ./
+      
+      # Option 3: Deploy to Netlify
+      # - name: Deploy to Netlify
+      #   uses: nwtgck/actions-netlify@v2
+      #   with:
+      #     publish-dir: './dist'
+      #     production-branch: main
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     deploy-message: "Deploy from GitHub Actions"
+      #   env:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      
+      # Option 4: Deploy to AWS S3 + CloudFront
+      # - name: Configure AWS credentials
+      #   uses: aws-actions/configure-aws-credentials@v4
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: us-east-1
+      #
+      # - name: Deploy to S3
+      #   run: |
+      #     aws s3 sync dist/ s3://${{ secrets.S3_BUCKET }}/ --delete
+      #     aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+      
+      - name: Deployment status
+        run: |
+          echo "### 🚀 Deployment Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Environment:** Production" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployed At:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+
+  notify-deployment:
+    name: Notify Team
+    runs-on: ubuntu-latest
+    needs: deploy-production
+    if: always() && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Send deployment notification
+        run: |
+          echo "### 📢 Deployment Notification" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ needs.deploy-production.result }}" == "success" ]; then
+            echo "✅ Production deployment successful!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Production deployment failed!" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      # Uncomment to send notifications to Discord, Slack, etc.
+      # - name: Discord notification
+      #   uses: sarisia/actions-status-discord@v1
+      #   if: always()
+      #   with:
+      #     webhook: ${{ secrets.DISCORD_WEBHOOK }}
+      #     status: ${{ needs.deploy-production.result }}
+      #     title: "Production Deployment"
+      #     description: "Landing page deployment to production"
+      #     url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

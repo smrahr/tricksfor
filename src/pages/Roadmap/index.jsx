@@ -36,7 +36,7 @@ const Roadmap = () => {
   };
 
   return (
-    <div className="dark:bg-primary-900 py-20 px-4">
+    <div className="dark:bg-primary-900 pt-[180px] md:pt-20 pb-20 px-4">
       <div className="container max-w-[1152px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
