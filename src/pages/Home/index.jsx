@@ -2,11 +2,13 @@ import Hero from "@components/home/Hero";
 import Games from "@components/home/Games";
 import HowItWorks from "@components/home/HowItWorks";
 import Body from "@components/home/Body";
+import SeoHead from "@components/SEO";
 import { forwardRef } from "react";
 
 const Home = forwardRef(function Home(props, ref) {
   return (
     <div>
+      <SeoHead page="home" />
       <div className="container max-w-[1152px]">
         <Hero />
       </div>
