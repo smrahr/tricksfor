@@ -2,10 +2,12 @@ import RockPaperScissorIntro from "@components/rockPaperScissor/RockPaperScissor
 import PronsAndCons from "@components/rockPaperScissor/ProsAndCons";
 import Streaks from "@components/rockPaperScissor/Streaks";
 import Boosters from "@components/rockPaperScissor/Boosters";
+import SeoHead from "@components/SEO";
 
 const RockPaperScissor = () => {
   return (
     <div>
+      <SeoHead page="rps" />
       <div className="container max-w-[1152px]">
         <RockPaperScissorIntro />
       </div>

@@ -2,10 +2,12 @@ import DiceIntro from "@components/dice/DiceIntro";
 import PronsAndCons from "@components/dice/ProsAndCons";
 import Streaks from "@components/dice/Streaks";
 import Boosters from "@components/dice/Boosters";
+import SeoHead from "@components/SEO";
 
 const Dice = () => {
   return (
     <div>
+      <SeoHead page="dice" />
       <div className="container max-w-[1152px]">
         <DiceIntro />
       </div>

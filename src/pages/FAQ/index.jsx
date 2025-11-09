@@ -2,6 +2,7 @@ import { faqData } from "@constants/faqData";
 import { useState } from "react";
 import HtmlParser from "html-react-parser";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import SeoHead from "@components/SEO";
 
 const Faq = () => {
   const [openId, setOpenId] = useState(null);
@@ -12,6 +13,7 @@ const Faq = () => {
 
   return (
     <div className="dark:bg-primary-900 pt-[180px] md:pt-20 pb-20 px-4">
+      <SeoHead page="faq" />
       <div className="container max-w-[1152px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

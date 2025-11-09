@@ -17,5 +17,6 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
+    "react/jsx-pascal-case": "off", // Allow all-caps components like SEO
   },
 };

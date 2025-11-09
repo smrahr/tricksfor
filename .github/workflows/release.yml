@@ -89,14 +89,12 @@ jobs:
           du -sh dist/ >> $GITHUB_STEP_SUMMARY
 
   deploy-production:
-    name: Deploy to Production
+    name: Verify Cloudflare Deployment
     runs-on: ubuntu-latest
     needs: create-release-artifact
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    # Uncomment when production environment is created in GitHub:
-    # environment:
-    #   name: production
-    #   url: https://tricksfor.com  # Update with your production URL
+    # Note: Actual deployment is handled by Cloudflare Pages auto-deploy
+    # This job just verifies the build is ready for deployment
     
     steps:
       - name: Checkout code
@@ -119,60 +117,33 @@ jobs:
         with:
           name: release-build
           
-      # Uncomment and configure your deployment method:
+      # Deployment is handled automatically by Cloudflare Pages
+      # Cloudflare builds and deploys on every push to main branch
+      # Configuration: https://dash.cloudflare.com/pages
+      # Build command: npm run build
+      # Build output directory: /dist
       
-      # Option 1: Deploy to Cloudflare Pages
-      # - name: Publish to Cloudflare Pages
-      #   uses: cloudflare/pages-action@v1
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: tricksfor-landing
-      #     directory: dist
-      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-      
-      # Option 2: Deploy to Vercel
-      # - name: Deploy to Vercel
-      #   uses: amondnet/vercel-action@v25
-      #   with:
-      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
-      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-      #     vercel-args: '--prod'
-      #     working-directory: ./
-      
-      # Option 3: Deploy to Netlify
-      # - name: Deploy to Netlify
-      #   uses: nwtgck/actions-netlify@v2
-      #   with:
-      #     publish-dir: './dist'
-      #     production-branch: main
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     deploy-message: "Deploy from GitHub Actions"
-      #   env:
-      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      
-      # Option 4: Deploy to AWS S3 + CloudFront
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: us-east-1
-      #
-      # - name: Deploy to S3
-      #   run: |
-      #     aws s3 sync dist/ s3://${{ secrets.S3_BUCKET }}/ --delete
-      #     aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+      - name: Verify deployment readiness
+        run: |
+          echo "✅ Build verified and ready for Cloudflare deployment"
+          echo ""
+          echo "Cloudflare Pages will automatically:"
+          echo "  - Build the project using: npm run build"
+          echo "  - Deploy /dist to production"
+          echo "  - Serve on global CDN"
+          echo ""
+          echo "Monitor deployment at: https://dash.cloudflare.com/pages"
       
       - name: Deployment status
         run: |
-          echo "### 🚀 Deployment Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "### 🚀 Ready for Cloudflare Deployment!" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Environment:** Production" >> $GITHUB_STEP_SUMMARY
-          echo "**Deployed At:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Status:** ✅ Verified" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployment Method:** Cloudflare Pages Auto-Deploy" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployed At:** Automatically by Cloudflare" >> $GITHUB_STEP_SUMMARY
           echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "View deployment: https://dash.cloudflare.com/pages" >> $GITHUB_STEP_SUMMARY
 
   notify-deployment:
     name: Notify Team

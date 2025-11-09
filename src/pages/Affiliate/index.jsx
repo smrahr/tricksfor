@@ -1,9 +1,11 @@
 import AffiliateIntro from "@components/affiliate/AffiliateIntro";
 import AffiliateReward from "@components/affiliate/AffiliateReward";
+import SeoHead from "@components/SEO";
 
 const Affiliate = () => {
   return (
     <div>
+      <SeoHead page="affiliate" />
       <div className="container max-w-[1152px]">
         <AffiliateIntro />
       </div>
